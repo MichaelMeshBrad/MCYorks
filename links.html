@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Official and community resources, tools, maps, and support links for the MeshCore project. Discover firmware, clients, FAQs, and regional MeshCore communities." />
+<title>MeshCore Project Resources | Official Links & Community</title>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #00fff2;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+  body {
+    margin: 0;
+    background: #0a0a0a;
+    color: #00fff2;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 40px 20px 20px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto 10px;
+    padding: 20px;
+    background: #121212;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00fff2aa;
+    flex-grow: 1;
+    text-align: center;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  header img {
+    max-height: 110px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 10px #00fff2);
+  }
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00fff2;
+    text-shadow: 0 0 15px #00fff2;
+  }
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    border-bottom: 2px solid #00fff2;
+    padding-bottom: 8px;
+    color: #00fff2;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  li {
+    background: #181818;
+    margin: 12px 0;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #004d4d99;
+    overflow-x: auto;
+    transition: box-shadow 0.3s ease;
+  }
+  li:hover, li:focus-within {
+    box-shadow: 0 0 15px #00fff2aa;
+    outline: none;
+  }
+  a {
+    color: #00fff2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15rem;
+    transition: text-shadow 0.3s ease;
+  }
+  a:hover, a:focus {
+    text-shadow: 0 0 10px #00fff2;
+    text-decoration: underline;
+    outline: none;
+  }
+  .desc {
+    display: block;
+    color: #66fffdbb;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    font-weight: 400;
+  }
+  footer {
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto 10px;
+    padding: 20px;
+    background: #121212;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00fff2aa;
+    color: #66fffdbb;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+  }
+  footer h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    color: #00fff2;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  footer a {
+    color: #00fff2;
+    text-decoration: none;
+  }
+  footer a:hover, footer a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+  @media (max-width: 600px) {
+  .container, footer {
+    max-width: 100%;
+    width: auto;
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  li {
+    padding: 12px 15px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+}
+
+    .container, footer {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    li {
+      padding: 12px 15px;
+    }
+    a {
+      word-break: break-word;
+      font-size: 1rem;
+    }
+    .desc {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <img src="meshcore_logo.png" alt="MeshCore project logo" />
+    </header>
+
+    <h1>MeshCore Project Links</h1>
+
+    <section aria-labelledby="official-resources">
+      <h2 id="official-resources">🔧 Official Resources</h2>
+      <ul>
+        <li>
+          <a href="https://meshcore.co.uk" target="_blank" rel="noopener noreferrer">MeshCore Official Website</a>
+          <span class="desc">Main site with firmware, apps, and instructions</span>
+        </li>
+        <li>
+          <a href="https://github.com/ripplebiz/MeshCore" target="_blank" rel="noopener noreferrer">GitHub: ripplebiz/MeshCore</a>
+          <span class="desc">Official firmware, tools, and source code</span>
+        </li>
+        <li>
+          <a href="https://github.com/ripplebiz/MeshCore/wiki/Repeater-&-Room-Server-CLI-Reference" target="_blank" rel="noopener noreferrer">CLI Reference Wiki</a>
+          <span class="desc">Command line server and repeater tool guide</span>
+        </li>
+        <li>
+          <a href="https://files.liamcottle.net/meshcore" target="_blank" rel="noopener noreferrer">MeshCore File Server (Liam Cottle)</a>
+          <span class="desc">Binaries, firmwares, and tools hosted by the lead dev</span>
+        </li>
+        <li>
+          <a href="https://flasher.meshcore.co.uk" target="_blank" rel="noopener noreferrer">MeshCore Web Flasher</a>
+          <span class="desc">Flash the firmware to your devices in the browser</span>
+        </li>
+        <li>
+          <a href="https://app.meshcore.nz/" target="_blank" rel="noopener noreferrer">MeshCore Web Companion Client</a>
+          <span class="desc">Google Chrome/Edge Web Client</span>
+        </li>
+        <li>
+          <a href="https://meshcore.co.uk/map.html" target="_blank" rel="noopener noreferrer">MeshCore Official Map</a>
+          <span class="desc">Visualise repeater and room server locations</span>
+        </li>
+        <li>
+          <a href="https://github.com/LitBomb/MeshCore-FAQ" target="_blank" rel="noopener noreferrer">MeshCore FAQ</a>
+          <span class="desc">Frequently Asked Questions repository</span>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="community-tools-maps">
+      <h2 id="community-tools-maps">🛰️ Community Tools & Maps</h2>
+      <ul>
+        <li>
+          <a href="https://mctracker.rightup.uk" target="_blank" rel="noopener noreferrer">MC Tracker</a>
+          <span class="desc">Community made Device tracker for MeshCore devices</span>
+        </li>
+        <li>
+          <a href="https://map.hiddenpath.network" target="_blank" rel="noopener noreferrer">HiddenPath Live Map</a>
+          <span class="desc">Community-generated repeater map</span>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="yorkshire-meshcore">
+      <h2 id="yorkshire-meshcore">🧭 Yorkshire MeshCore</h2>
+      <ul>
+        <li>
+          <a href="https://meshcorelinks.michaelholroyd.uk/YM-Map.html" target="_blank" rel="noopener noreferrer">MeshCore Yorkshire Map</a>
+          <span class="desc">Map Showing MeshCore Nodes in the Yorkshire Area</span>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener noreferrer">Facebook Group: MeshCore Yorkshire</a>
+          <span class="desc">Regional Facebook community for Yorkshire MeshCore users</span>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="community-support">
+      <h2 id="community-support">👥 Community & Support</h2>
+      <ul>
+        <li>
+          <a href="https://discord.com/invite/ZVH2ujy9ex" target="_blank" rel="noopener noreferrer">MeshCore Discord Server</a>
+          <span class="desc">Ask questions, get help, and join discussions</span>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/groups/meshcore" target="_blank" rel="noopener noreferrer">MeshCore Facebook Group</a>
+          <span class="desc">Facebook community user group</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <h3>License</h3>
+    <p>This project is provided as-is for informational and community use.</p>
+
+    <h3>Contributing</h3>
+    <p>Feel free to submit pull requests or issues for additional links, updates, or improvements.</p>
+
+    <hr style="border-color: #004d4d88; margin: 20px 0;" />
+
+    <p>
+      Hosted on
+      <a href="https://github.com/MichaelMeshBrad/MeshLinks" target="_blank" rel="noopener noreferrer">GitHub</a> |
+      Contact: <a href="mailto:meshcore@michaelholroyd.uk">meshcore@michaelholroyd.uk</a>
+    </p>
+
+    <p style="margin-top: 15px; font-style: italic;">Built with ❤️ for the MeshCore community.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Yorkshire Mesh is part of the MeshCore network, providing off-grid, secure mesh communication using LoRa technology. View live nodes and repeater activity in the Yorkshire area." />
+  <meta name="keywords" content="MeshCore, Yorkshire Mesh, LoRa, Mesh Network, Secure Messaging, Off-grid Communication" />
+  <meta name="author" content="Yorkshire Mesh" />
+  <title>Yorkshire Mesh – MeshCore Network</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #00fff2;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #00fff2;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      margin: 0;
+    }
+    main {
+      flex-grow: 1;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      display: block;
+    }
+    footer {
+      background: #1a1a1a;
+      color: #00fff2;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #00fff2;
+    }
+    a {
+      color: #00fff2;
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      footer {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yorkshire Mesh – MeshCore Network</h1>
+  </header>
+
+  <main>
+    <iframe
+      src="https://map.meshcore.dev/?zoom=10&lat=53.7560&lon=-1.3541&cluster=10&nodes=1%2C2%2C3%2C4&date=2027-08-11"
+      title="MeshCore Yorkshire Map View"
+      loading="lazy"
+    ></iframe>
+  </main>
+
+  <footer>
+    Part of the <a href="https://meshcore.dev" target="_blank" rel="noopener noreferrer">MeshCore</a> project –
+    Secure, off-grid messaging for Yorkshire communities. |
+    <a href="https://meshcorelinks.michaelholroyd.uk" target="_blank" rel="noopener noreferrer">Project Links</a>
+  </footer>
+</body>
+</html>
