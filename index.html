@@ -171,8 +171,8 @@
 <div>
 <h2>Get connected. Help expand coverage. Stay resilient.</h2>
 <div class="cta-row">
-<a class="btn" href="links.html">Project Links</a>
-<a class="btn secondary" href="https://meshcore.dev" rel="noopener" target="_blank">About MeshCore</a>
+<a class="btn" href="links.html">Meshcore Project Links</a>
+<a class="btn secondary" href="https://meshcore.co.uk/about.html" rel="noopener" target="_blank">About MeshCore</a>
 <a class="btn" href="#map">View Map</a>
 <a class="btn" href="#start">Get Connected</a>
 <a aria-label="Join the Facebook Group" class="btn fb" href="https://www.facebook.com/groups/1345606723386562" rel="noopener" target="_blank">
@@ -198,7 +198,7 @@
 </section>
 <!-- Embedded Map with scroll shield -->
 <section class="map-embed" id="map">
-<iframe id="ymap" loading="lazy" src="https://map.meshcore.dev/?zoom=10&amp;lat=53.7560&amp;lon=-1.3541&amp;cluster=10&amp;nodes=1%2C2%2C3%2C4&amp;date=2027-08-11" title="MeshCore live map"></iframe>
+<iframe id="ymap" loading="lazy" src="https://map.meshcore.dev/?zoom=10&lat=53.79&lon=-1.59&cluster=10" title="MeshCore Internet Node Map"></iframe>
 <div class="map-shield" id="mapShield" title="Click to interact">
 <div class="map-hint">Click or tap to interact with the map</div>
 </div>
@@ -216,7 +216,7 @@
 <section class="grid">
 <article class="card">
 <h3>1) Flash &amp; set region</h3>
-<p>Use the Web Flasher to install firmware, and select <b>UK/EU (868 MHz)</b> as the region. This applies the correct ISM settings for licence‑free operation in the UK.</p>
+<p>Use the Web Flasher to install firmware, and select <b>UK/EU (868 MHz)</b> as the region. This applies the correct settings for licence‑free operation in the UK.</p>
 <div class="cta-row">
 <a class="btn" href="https://flasher.meshcore.co.uk" rel="noopener" target="_blank">Open Web Flasher</a>
 <a class="btn secondary" href="https://meshcore.co.uk/apps.html" rel="noopener" target="_blank">Apps</a>
@@ -265,7 +265,7 @@
 <div class="small">Submitting opens your email app with a pre‑filled message. No data is stored on this site.</div>
 <div class="cta-row">
 <button class="btn" type="submit">Send message</button>
-<a class="btn secondary" href="mailto:info@meshcore.co.uk?subject=MeshCore%20%E2%80%93%20Yorkshire%20contact">Open email app</a>
+<a class="btn secondary" href="mailto:info@meshcoreyorkshire.uk?subject=MeshCore%20%E2%80%93%20Yorkshire%20contact">Open email app</a>
 </div>
 </form>
 </section>
@@ -273,7 +273,7 @@
 <footer>
       Built with ❤️ for resilient comms • MeshCore – Yorkshire •
       <a href="https://www.facebook.com/groups/1345606723386562" rel="noopener" target="_blank">Facebook Group</a><br/>
-      Project links: <a href="links.html">links.html</a> • © <span id="year"></span>
+      Project links: <a href="links.html">Project links</a> • © <span id="year"></span>
 </footer>
 </div>
 <script>
@@ -293,7 +293,7 @@
       const msg = document.getElementById('message').value.trim();
       const subject = encodeURIComponent('MeshCore – Yorkshire contact');
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}\n\n— Sent from MeshCore – Yorkshire site`);
-      window.location.href = `mailto:info@meshcore.co.uk?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@meshcoreyorkshire.uk?subject=${subject}&body=${body}`;
     });
 
     // Footer year
