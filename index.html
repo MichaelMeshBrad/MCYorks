@@ -3,34 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meshcore Yorkshire — Live Map, Getting Started & Community</title>
+  <title>Meshcore Yorkshire — Network Stats, Getting Started & Community</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Meshcore Yorkshire is a volunteer LoRa mesh network across Yorkshire for short, secure text messaging on 868 MHz. See the live map, get started, and join the community." />
-  <meta name="keywords" content="Meshcore Yorkshire, MeshCore, LoRa mesh, 868 MHz, off-grid messaging, resilient communications, Yorkshire mesh network, community radio, hilltop nodes, UK mesh, Web Flasher" />
+  <meta name="description" content="Meshcore Yorkshire is a volunteer LoRa mesh network across Yorkshire for short, secure text messaging on 868 MHz. See live network stats, get started, and join the community." />
+  <meta name="keywords" content="Meshcore Yorkshire, MeshCore, LoRa mesh, 868 MHz, off-grid messaging, resilient communications, Yorkshire mesh network, community radio, hilltop nodes, UK mesh, Web Flasher, network stats" />
   <link rel="canonical" href="https://meshcoreyorkshire.uk/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0f1115" />
   <meta name="format-detection" content="telephone=no,address=no,email=no" />
 
   <!-- Performance hints -->
-  <link rel="preconnect" href="https://map.meshcore.dev" crossorigin />
   <link rel="preconnect" href="https://flasher.meshcore.co.uk" crossorigin />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Meshcore Yorkshire — Live Map, Getting Started & Community" />
-  <meta property="og:description" content="Volunteer LoRa mesh across Yorkshire. Live map, how to get started, and links to tools & the Facebook group." />
+  <meta property="og:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
+  <meta property="og:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://meshcoreyorkshire.uk/" />
   <meta property="og:site_name" content="Meshcore Yorkshire" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
-  <meta property="og:image:alt" content="Meshcore Yorkshire — live coverage map and community links" />
+  <meta property="og:image:alt" content="Meshcore Yorkshire — live stats and community links" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Meshcore Yorkshire — Live Map, Getting Started & Community" />
-  <meta name="twitter:description" content="Volunteer LoRa mesh across Yorkshire. Live map, how to get started, and links to tools & the Facebook group." />
+  <meta name="twitter:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
+  <meta name="twitter:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
   <meta name="twitter:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
 
   <!-- Icons -->
@@ -48,7 +47,7 @@
     "image": "https://meshcoreyorkshire.uk/assets/og-image.jpg",
     "sameAs": ["https://www.facebook.com/groups/1345606723386562"],
     "areaServed": "GB-ENG",
-    "keywords": ["Meshcore Yorkshire","LoRa mesh","868 MHz","off-grid messaging","resilient communications","Yorkshire mesh network"]
+    "keywords": ["Meshcore Yorkshire","LoRa mesh","868 MHz","off-grid messaging","resilient communications","Yorkshire mesh network","network stats"]
   }
   </script>
   <script type="application/ld+json">
@@ -122,15 +121,6 @@
       content:"";display:block;width:72px;height:2px;margin-top:8px;
       background: linear-gradient(90deg, var(--brand), var(--accent));opacity:.7;border-radius:999px
     }
-    /* Map section */
-    .map-section{padding:var(--section-pad-sm) 0;border-bottom:1px solid var(--border)}
-    .embed-ratio{position:relative;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#0b0d10}
-    .embed-ratio::after{content:"";display:block;padding-bottom:45%}
-    .embed-ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
-    .map-overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35));color:#fff;font-weight:800;letter-spacing:.3px;text-align:center;cursor:pointer}
-    .map-overlay span{background:rgba(0,0,0,.45);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);font-size:.95rem}
-    .embed-ratio.interactive .map-overlay{display:none}
-    .embed-ratio.interactive iframe{pointer-events:auto}
     /* Generic sections */
     section{padding:var(--section-pad) 0;border-bottom:1px solid var(--border)}
     .muted{color:var(--muted)}
@@ -163,8 +153,75 @@
     footer{padding:22px 0;background:var(--bg-soft);color:var(--muted)}
     .footer-grid{display:grid;gap:12px;grid-template-columns:1fr auto}
     @media (max-width:800px){.footer-grid{grid-template-columns:1fr} .footer-grid div:last-child{text-align:left}}
-  
     .legal{font-size:.9rem}
+
+    /* Stats panel */
+    .mx-stats { 
+      background: var(--card); 
+      padding: clamp(1.25rem, 2vw, 2rem); 
+      border-radius: var(--radius); 
+      border: 1px solid var(--border); 
+      box-shadow: var(--shadow);
+    }
+    .mx-stats h2 {
+      color: var(--brand-2);
+      text-align: center;
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      margin: 0 0 1rem 0;
+      letter-spacing: .3px;
+    }
+    .mx-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: clamp(.8rem, 1.5vw, 1.2rem);
+    }
+    @media (max-width: 900px) { .mx-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .mx-grid { grid-template-columns: 1fr; } }
+
+    .mx-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: .9rem;
+      padding: 1rem;
+      text-align: center;
+      transform: translateY(6px);
+      opacity: 0;
+      animation: mx-fadeUp .6s ease forwards;
+    }
+    .mx-card:nth-child(2){ animation-delay: .06s; }
+    .mx-card:nth-child(3){ animation-delay: .12s; }
+    .mx-card:nth-child(4){ animation-delay: .18s; }
+
+    .mx-icon {
+      width: 40px; height: 40px; 
+      margin: 0 auto .5rem;
+      color: var(--brand);
+      opacity: .95;
+    }
+    .mx-icon svg { width: 100%; height: 100%; }
+
+    .mx-value {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+      letter-spacing: .5px;
+    }
+    .mx-label {
+      margin-top: .25rem;
+      font-size: .95rem;
+      color: var(--muted);
+    }
+    .mx-subtle {
+      margin: .9rem 0 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @keyframes mx-fadeUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body id="top">
@@ -175,7 +232,7 @@
           <img src="/assets/logo.png" alt="Meshcore Yorkshire logo" />
         </div>
         <div class="nav-links" role="navigation" aria-label="Top links">
-          <a href="#map">Map</a>
+          <a href="#stats">Stats</a>
           <a href="#about">About</a>
           <a href="#start">Get started</a>
           <a href="#links">Project Links</a>
@@ -185,7 +242,7 @@
         <details class="menu">
           <summary aria-label="Open menu">Menu</summary>
           <div class="panel" role="menu">
-            <a role="menuitem" href="#map">Map</a>
+            <a role="menuitem" href="#stats">Stats</a>
             <a role="menuitem" href="#about">About</a>
             <a role="menuitem" href="#start">Get started</a>
             <a role="menuitem" href="#links">Project Links</a>
@@ -204,7 +261,7 @@
         <h1>Meshcore Yorkshire</h1>
         <p class="strap">Community-run MeshCore group across Yorkshire</p>
         <div class="ctas">
-          <a class="btn lg" href="#map">View live map</a>
+          <a class="btn lg" href="#stats">View network stats</a>
           <a class="btn secondary lg" href="#start">How to get started</a>
           <a class="btn secondary lg" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook Group</a>
         </div>
@@ -221,20 +278,55 @@
       </div>
     </section>
 
-    <!-- Map -->
-    <section class="map-section" id="map" aria-label="Live Meshcore map section">
+    <!-- Stats (replaces Internet Map) -->
+    <section class="map-section" id="stats" aria-labelledby="mx-stats-title">
       <div class="container">
-        <div class="embed-ratio" id="mapEmbed">
-          <iframe
-            title="Meshcore – Yorkshire"
-            loading="lazy"
-            src="https://map.meshcore.dev/?zoom=10&lat=53.79&lon=-1.59&cluster=10"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
-          <div class="map-overlay" id="mapOverlay" aria-label="Click to enable map interaction">
-            <span>Click to interact</span>
+        <div class="mx-stats">
+          <h2 id="mx-stats-title">Yorkshire Mesh Network Stats</h2>
+
+          <div class="mx-grid">
+            <!-- Companions -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Users icon -->
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 14c2.761 0 5 2.239 5 5v1H3v-1c0-2.761 2.239-5 5-5h8Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="mx-value" data-target="15">0</div>
+              <div class="mx-label">Companions</div>
+            </article>
+
+            <!-- Repeaters -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Tower icon -->
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v6m0 8v6M5 9l7-1 7 1M8 22h8M6 17l12-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="mx-value" data-target="21">0</div>
+              <div class="mx-label">Repeaters</div>
+            </article>
+
+            <!-- Rooms -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Rooms / channels icon -->
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="mx-value" data-target="5">0</div>
+              <div class="mx-label">Rooms</div>
+            </article>
+
+            <!-- Total Nodes -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Network / nodes icon -->
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="5" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="19" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 7.5 6.5 17M13.5 7.5l4 9.5M8 19h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="mx-value" data-target="41">0</div>
+              <div class="mx-label">Total Nodes</div>
+            </article>
           </div>
+
+          <p class="mx-subtle">Last updated: 20 Aug 2025</p>
         </div>
       </div>
     </section>
@@ -281,7 +373,7 @@
               </div>
               <div class="step">
                 <h3>Say hello</h3>
-                <p class="muted">Send a message, show up on the map, and help others hop across the county.</p>
+                <p class="muted">Send a message and help others hop across the county.</p>
               </div>
             </div>
           </div>
@@ -362,7 +454,6 @@
     </section>
   </main>
 
-  
   <footer>
     <div class="container footer-grid">
       <div>
@@ -386,22 +477,34 @@
     </div>
   </footer>
 
-
   <a href="#top" class="backtop" id="backTop" aria-label="Back to top">↑ Top</a>
 
   <script>
-    // Enable map interaction on click/tap (prevents scroll hijack)
+    // Count-up on first view (tiny, dependency-free)
     (function(){
-      const embed = document.getElementById('mapEmbed');
-      const overlay = document.getElementById('mapOverlay');
-      if (!embed || !overlay) return;
-      function enable(){
-        embed.classList.add('interactive');
-        overlay.setAttribute('aria-hidden','true');
-      }
-      overlay.addEventListener('click', enable);
-      overlay.addEventListener('keydown', (e)=>{ if (e.key==='Enter' || e.key===' ') enable(); });
+      const els = document.querySelectorAll('.mx-value');
+      if(!('IntersectionObserver' in window)) { els.forEach(n => n.textContent = n.dataset.target); return; }
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(!entry.isIntersecting) return;
+          const el = entry.target;
+          io.unobserve(el);
+          const target = parseInt(el.dataset.target, 10) || 0;
+          const dur = 900; // ms
+          let start = null;
+          function step(ts){
+            if(!start) start = ts;
+            const p = Math.min((ts - start) / dur, 1);
+            el.textContent = Math.round(target * ease(p));
+            if(p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.35 });
+      els.forEach(el => io.observe(el));
     })();
+
     // Back-to-top show/hide on scroll
     (function(){
       const btn = document.getElementById('backTop');
@@ -417,7 +520,6 @@
   <style>
     /* Screen-reader only utility */
     .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;clip:rect(0 0 0 0);overflow:hidden}
-  
     .legal{font-size:.9rem}
   </style>
 </body>
