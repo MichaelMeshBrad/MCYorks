@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meshcore Yorkshire — Network Stats, Getting Started & Community</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Meshcore Yorkshire is a volunteer LoRa mesh network across Yorkshire for short, secure text messaging on 868 MHz. See live network stats, get started, and join the community." />
+  <meta name="keywords" content="Meshcore Yorkshire, MeshCore, LoRa mesh, 868 MHz, off-grid messaging, resilient communications, Yorkshire mesh network, community radio, hilltop nodes, UK mesh, Web Flasher, network stats" />
+  <link rel="canonical" href="https://meshcoreyorkshire.uk/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0f1115" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://flasher.meshcore.co.uk" crossorigin />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
+  <meta property="og:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://meshcoreyorkshire.uk/" />
+  <meta property="og:site_name" content="Meshcore Yorkshire" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
+  <meta property="og:image:alt" content="Meshcore Yorkshire — live stats and community links" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
+  <meta name="twitter:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
+  <meta name="twitter:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Meshcore Yorkshire",
+    "url": "https://meshcoreyorkshire.uk/",
+    "logo": "https://meshcoreyorkshire.uk/assets/logo.png",
+    "image": "https://meshcoreyorkshire.uk/assets/og-image.jpg",
+    "sameAs": ["https://www.facebook.com/groups/1345606723386562"],
+    "areaServed": "GB-ENG",
+    "keywords": ["Meshcore Yorkshire","LoRa mesh","868 MHz","off-grid messaging","resilient communications","Yorkshire mesh network","network stats"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Meshcore Yorkshire",
+    "url": "https://meshcoreyorkshire.uk/",
+    "inLanguage": "en-GB",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Meshcore Yorkshire",
+      "logo": {"@type": "ImageObject","url": "https://meshcoreyorkshire.uk/assets/logo.png"}
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0f1115;
+      --bg-soft:#121419;
+      --card:#151924;
+      --border:#222735;
+      --text:#e7ecf3;
+      --muted:#a7b3c6;
+      --brand:#5aa7ff;
+      --brand-2:#7dd3fc;
+      --accent:#8b5cf6;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:14px;
+      --container: 1200px;
+      --section-pad: 36px;
+      --section-pad-sm: 26px;
+      --grid-gap: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+    .btn{display:inline-block;background:linear-gradient(180deg, var(--brand), var(--brand-2));color:#00131e;padding:12px 18px;font-weight:800;border-radius:999px;box-shadow:var(--shadow)}
+    .btn.secondary{background:#1c2333;color:var(--text);border:1px solid var(--border)}
+    .btn.block{display:block;text-align:center}
+    .btn.lg{padding:14px 20px;font-size:1.02rem}
+    header.site{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.75);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    nav.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:36px;width:auto}
+    .nav-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+    .nav-links a:hover{background:#1a1f2b;border-color:var(--border);text-decoration:none}
+    @media (max-width:920px){.nav-links{display:none}details.menu{display:block}}
+    details.menu{display:none}
+    details.menu summary{list-style:none;cursor:pointer;padding:8px 12px;border:1px solid var(--border);border-radius:999px}
+    details[open] summary{background:#1a1f2b}
+    details.menu .panel{margin-top:8px;background:#111522;border:1px solid var(--border);border-radius:var(--radius);padding:10px}
+    details.menu .panel a{display:block;padding:8px 10px;border-radius:8px}
+    details.menu .panel a:hover{background:#1a1f2b;text-decoration:none}
+    /* Hero */
+    .hero{border-bottom:1px solid var(--border);padding:var(--section-pad) 0 var(--section-pad-sm)}
+    .hero h1{font-size:clamp(2rem,2.3vw + 1rem,2.8rem);margin:0 0 6px 0;line-height:1.14;letter-spacing:.2px}
+    .strap{font-size:.95rem;color:var(--muted);max-width:62ch;margin:0}
+    .ctas{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .hero-line{margin-top:12px;color:var(--muted);font-weight:700;letter-spacing:.2px;opacity:.95}
+    .hero-line .dot{margin:0 .5ch;opacity:.7}
+    .mission{margin-top:10px;color:var(--muted);max-width:80ch;line-height:1.6;border-left:3px solid rgba(125,211,252,.35);padding-left:12px}
+    /* Section heading accent */
+    .section-title{font-size:1.22rem;margin:0 0 10px 0;position:relative}
+    .section-title:after{
+      content:"";display:block;width:72px;height:2px;margin-top:8px;
+      background: linear-gradient(90deg, var(--brand), var(--accent));opacity:.7;border-radius:999px
+    }
+    /* Generic sections */
+    section{padding:var(--section-pad) 0;border-bottom:1px solid var(--border)}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:var(--grid-gap)}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45);border-color:#2b3347}
+    .card h3{margin:0 0 6px 0;font-size:1.02rem}
+    .card p{margin:0;color:var(--muted)}
+    /* Steps */
+    .steps{counter-reset:s}
+    .step{position:relative;padding-left:40px;margin-bottom:10px}
+    .step::before{
+      counter-increment:s; content: counter(s);
+      position:absolute; left:0; top:2px; width:28px; height:28px; border-radius:50%;
+      background:linear-gradient(180deg, var(--brand), var(--brand-2)); color:#00131e;
+      display:grid; place-items:center; font-weight:800; border:1px solid #0e1624; box-shadow:var(--shadow)
+    }
+    /* Back to top (floating) */
+    .backtop{
+      position:fixed; right:18px; bottom:18px; z-index:999; display:none;
+      background:#1c2333; color:var(--text); border:1px solid var(--border);
+      padding:10px 14px; border-radius:999px; box-shadow:var(--shadow); font-weight:800
+    }
+    .backtop:focus-visible{outline:2px solid white; outline-offset:3px}
+    @media (max-width:520px){ .backtop{right:14px; bottom:14px} }
+    /* Footer */
+    footer{padding:22px 0;background:var(--bg-soft);color:var(--muted)}
+    .footer-grid{display:grid;gap:12px;grid-template-columns:1fr auto}
+    @media (max-width:800px){.footer-grid{grid-template-columns:1fr} .footer-grid div:last-child{text-align:left}}
+    .legal{font-size:.9rem}
+
+    /* Stats panel */
+    .mx-stats { 
+      background: var(--card); 
+      padding: clamp(1.25rem, 2vw, 2rem); 
+      border-radius: var(--radius); 
+      border: 1px solid var(--border); 
+      box-shadow: var(--shadow);
+    }
+    .mx-stats h2 {
+      color: var(--brand-2);
+      text-align: center;
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      margin: 0 0 1rem 0;
+      letter-spacing: .3px;
+    }
+    .mx-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: clamp(.8rem, 1.5vw, 1.2rem);
+    }
+    @media (max-width: 900px) { .mx-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .mx-grid { grid-template-columns: 1fr; } }
+
+    .mx-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: .9rem;
+      padding: 1rem;
+      text-align: center;
+      transform: translateY(6px);
+      opacity: 0;
+      animation: mx-fadeUp .6s ease forwards;
+    }
+    .mx-card:nth-child(2){ animation-delay: .06s; }
+    .mx-card:nth-child(3){ animation-delay: .12s; }
+    .mx-card:nth-child(4){ animation-delay: .18s; }
+
+    .mx-icon {
+      width: 40px; height: 40px; 
+      margin: 0 auto .5rem;
+      color: var(--brand);
+      opacity: .95;
+    }
+    .mx-icon svg { width: 100%; height: 100%; }
+
+    .mx-value {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+      letter-spacing: .5px;
+    }
+    .mx-label {
+      margin-top: .25rem;
+      font-size: .95rem;
+      color: var(--muted);
+    }
+    .mx-subtle {
+      margin: .9rem 0 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @keyframes mx-fadeUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="site" role="banner">
+    <div class="container">
+      <nav class="bar" aria-label="Primary navigation">
+        <div class="brand">
+          <img src="/assets/logo.png" alt="Meshcore Yorkshire logo" />
+        </div>
+        <div class="nav-links" role="navigation" aria-label="Top links">
+          <a href="#stats">Stats</a>
+          <a href="#about">About</a>
+          <a href="#start">Get started</a>
+          <a href="#links">Project Links</a>
+          <a href="https://github.com/LitBomb/MeshCore-FAQ" target="_blank" rel="noopener">FAQ</a>
+          <a href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <details class="menu">
+          <summary aria-label="Open menu">Menu</summary>
+          <div class="panel" role="menu">
+            <a role="menuitem" href="#stats">Stats</a>
+            <a role="menuitem" href="#about">About</a>
+            <a role="menuitem" href="#start">Get started</a>
+            <a role="menuitem" href="#links">Project Links</a>
+            <a role="menuitem" href="https://github.com/LitBomb/MeshCore-FAQ" target="_blank" rel="noopener">FAQ</a>
+            <a role="menuitem" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero" id="top-hero">
+      <div class="container">
+        <h1>Meshcore Yorkshire</h1>
+        <p class="strap">Community-run MeshCore group across Yorkshire</p>
+        <div class="ctas">
+          <a class="btn lg" href="#stats">View network stats</a>
+          <a class="btn secondary lg" href="#start">How to get started</a>
+          <a class="btn secondary lg" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook Group</a>
+        </div>
+        <div class="hero-line">
+          <span>Get connected</span><span class="dot">•</span>
+          <span>Help expand coverage</span><span class="dot">•</span>
+          <span>Stay resilient</span>
+        </div>
+        <p class="mission">
+          MeshCore Yorkshire is a volunteer effort to build practical, low‑power radio coverage across the county
+          for short, secure text messaging and situational awareness — useful at events, on the hills, and when
+          phone networks are busy or down.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats (replaces Internet Map) -->
+    <section class="map-section" id="stats" aria-labelledby="mx-stats-title">
+      <div class="container">
+        <div class="mx-stats">
+          <h2 id="mx-stats-title">Yorkshire Mesh Network Stats</h2>
+
+          <div class="mx-grid">
+            <!-- Companions -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Users icon -->
+                <svg viewBox="0 0 24 24" fill="none"><path d="M16 14c2.761 0 5 2.239 5 5v1H3v-1c0-2.761 2.239-5 5-5h8Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="mx-value" data-target="33">0</div>
+              <div class="mx-label">Companions</div>
+            </article>
+
+            <!-- Repeaters -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Tower icon -->
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v6m0 8v6M5 9l7-1 7 1M8 22h8M6 17l12-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="mx-value" data-target="40">0</div>
+              <div class="mx-label">Repeaters</div>
+            </article>
+
+            <!-- Rooms -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Rooms / channels icon -->
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="mx-value" data-target="8">0</div>
+              <div class="mx-label">Rooms</div>
+            </article>
+
+            <!-- Total Nodes -->
+            <article class="mx-card">
+              <div class="mx-icon" aria-hidden="true">
+                <!-- Network / nodes icon -->
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="5" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="19" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 7.5 6.5 17M13.5 7.5l4 9.5M8 19h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="mx-value" data-target="81">0</div>
+              <div class="mx-label">Total Nodes</div>
+            </article>
+          </div>
+
+          <p class="mx-subtle">Last updated: 27 Aug 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About MeshCore -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About MeshCore</h2>
+        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
+          <a class="card" href="https://meshcore.co.uk/about.html" target="_blank" rel="noopener">
+            <h3>About MeshCore</h3>
+            <p>Overview, goals and FAQs.</p>
+          </a>
+          <a class="card" href="https://meshcore.co.uk" target="_blank" rel="noopener">
+            <h3>Main MeshCore Website</h3>
+            <p>Downloads, docs and news.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section id="start">
+      <div class="container">
+        <h2 class="section-title">Get started in Yorkshire</h2>
+        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
+          <div class="card">
+            <div class="steps">
+              <div class="step">
+                <h3>Get a device</h3>
+                <p class="muted">Pick a LoRa-capable device supported by MeshCore.</p>
+              </div>
+              <div class="step">
+                <h3>Flash MeshCore</h3>
+                <p class="muted">Install the latest stable firmware. Use the official web flasher.</p>
+              </div>
+              <div class="step">
+                <h3>Set EU/UK defaults</h3>
+                <p class="muted">Use the 868 MHz default public channel for compatibility across Yorkshire.</p>
+              </div>
+              <div class="step">
+                <h3>Place your node</h3>
+                <p class="muted">Higher is better. Windowsills, lofts, hilltops—line-of-sight helps your neighbours.</p>
+              </div>
+              <div class="step">
+                <h3>Say hello</h3>
+                <p class="muted">Send a message and help others hop across the county.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Quick links</h3>
+            <ul class="muted" style="margin-top:8px;display:grid;gap:6px">
+              <li><a href="https://meshcoreyorkshire.uk/links">Meshcore Yorkshire — Project Links</a></li>
+              <li><a href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">Web Flasher</a></li>
+              <li><a href="https://meshcore.co.uk" target="_blank" rel="noopener">Main MeshCore Website</a></li>
+              <li><a href="https://meshcore.co.uk/about.html" target="_blank" rel="noopener">About MeshCore</a></li>
+              <li><a href="https://github.com/LitBomb/MeshCore-FAQ" target="_blank" rel="noopener">MeshCore FAQ</a></li>
+            </ul>
+            <blockquote style="margin-top:10px">
+              “From the Dales to the Pennines, Meshcore Yorkshire gives us a way to keep in touch when everything else drops.”
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Links (cards like About) -->
+    <section id="links">
+      <div class="container">
+        <h2 class="section-title">Project Links</h2>
+        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
+          <a class="card" href="https://meshcoreyorkshire.uk/links">
+            <h3>Meshcore Yorkshire — Links</h3>
+            <p>Handy links for the local project.</p>
+          </a>
+          <a class="card" href="https://flasher.meshcore.co.uk/" target="_blank" rel="noopener">
+            <h3>Web Flasher</h3>
+            <p>Flash MeshCore to your device in the browser.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section id="community">
+      <div class="container">
+        <h2 class="section-title">Community</h2>
+        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
+          <div class="card">
+            <h3>Facebook Group</h3>
+            <p class="muted">Chat with other Yorkshire nodes, plan installs, and share coverage wins.</p>
+            <a class="btn lg block" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener" style="margin-top:12px">Join the Facebook Group</a>
+            <h3 style="margin-top:14px">Project Links</h3>
+            <p class="muted">Device guides, flashing tools, and local resources — all in one place.</p>
+            <a class="btn secondary block" href="https://meshcoreyorkshire.uk/links" style="margin-top:8px">Project Links</a>
+          </div>
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="muted">No data is stored by us — your message is sent via your email app.</p>
+            <form action="mailto:info@meshcoreyorkshire.co.uk" method="post" enctype="text/plain">
+              <div style="display:grid;gap:10px">
+                <label>
+                  <span class="visually-hidden">Your name</span>
+                  <input name="name" type="text" placeholder="Your name" required
+                         style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)">
+                </label>
+                <label>
+                  <span class="visually-hidden">Your email</span>
+                  <input name="email" type="email" placeholder="Your email" required
+                         style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)">
+                </label>
+                <label>
+                  <span class="visually-hidden">Message</span>
+                  <textarea name="message" rows="4" placeholder="How can we help?" required
+                            style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)"></textarea>
+                </label>
+                <button type="submit" class="btn block">Send via email</button>
+              </div>
+            </form>
+            <p class="muted" style="margin-top:10px;font-size:.9rem">Prefer direct? Email <a href="mailto:info@meshcoreyorkshire.co.uk">info@meshcoreyorkshire.co.uk</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="muted">Built with ❤️ by volunteers for volunteers.</div>
+        <div class="muted legal" style="margin-top:6px">
+          © 2025 Meshcore Yorkshire Community. Site code is released under the
+          <a href="/LICENSE" target="_blank" rel="noopener">MIT License</a>.
+        </div>
+        <div class="muted legal" style="margin-top:6px">
+          Meshcore Yorkshire is part of the wider MeshCore network and run independently by local volunteers.
+          No warranties; use at your own risk. Logos and names remain the property of their respective owners.
+        </div>
+      </div>
+      <div style="text-align:right">
+        <a href="#top">↑ Back to top</a> ·
+        <a href="https://meshcoreyorkshire.uk/links">Project Links</a> ·
+        <a href="https://meshcore.co.uk/about.html" target="_blank" rel="noopener">About MeshCore</a> ·
+        <a href="https://meshcore.co.uk" target="_blank" rel="noopener">Main Site</a> ·
+        <a href="mailto:info@meshcoreyorkshire.co.uk">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="backtop" id="backTop" aria-label="Back to top">↑ Top</a>
+
+  <script>
+    // Count-up on first view (tiny, dependency-free)
+    (function(){
+      const els = document.querySelectorAll('.mx-value');
+      if(!('IntersectionObserver' in window)) { els.forEach(n => n.textContent = n.dataset.target); return; }
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(!entry.isIntersecting) return;
+          const el = entry.target;
+          io.unobserve(el);
+          const target = parseInt(el.dataset.target, 10) || 0;
+          const dur = 900; // ms
+          let start = null;
+          function step(ts){
+            if(!start) start = ts;
+            const p = Math.min((ts - start) / dur, 1);
+            el.textContent = Math.round(target * ease(p));
+            if(p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.35 });
+      els.forEach(el => io.observe(el));
+    })();
+
+    // Back-to-top show/hide on scroll
+    (function(){
+      const btn = document.getElementById('backTop');
+      function onScroll(){
+        if(window.scrollY > 320){ btn.style.display = 'inline-block'; }
+        else { btn.style.display = 'none'; }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+  </script>
+
+  <style>
+    /* Screen-reader only utility */
+    .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;clip:rect(0 0 0 0);overflow:hidden}
+    .legal{font-size:.9rem}
+  </style>
+</body>
+</html>
