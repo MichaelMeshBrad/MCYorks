@@ -149,27 +149,20 @@
 
     <h3>Requirements</h3>
     <ul>
-      <li>Firmware version <code>1.15.0</code> or newer</li>
+      <li>Firmware version <code>1.11.0</code> or newer</li>
     </ul>
 
     <h3>Configuration Steps</h3>
 
     <div class="step">1. Log in to the repeater management interface</div>
-    <div class="step">2. Open <b>Regions</b></div>
-    <div class="step">3. Click the <b>⋮</b> (top right)</div>
-    <div class="step">4. Select <b>Default Region</b></div>
-    <div class="step">5. Enter <code>yorkshire</code></div>
-    <div class="step">6. Click the <b>✓ tick icon</b> to save</div>
+    <div class="step">2. Go into Settings</div>
+    <div class="step">3. Click on <b>Manage Regions</b></div>
+    <div class="step">4. Click the <b>⋮</b> (top right)</div>
+    <div class="step">5. Select <b>Default Region or add region (FW Dependant)</b></div>
+    <div class="step">6. Enter <code>yorkshire</code></div>
+    <div class="step">7. Click the <b>✓ tick icon</b> to save</div>
 
     <img class="image" src="assets/rptregion.jpeg" alt="Repeater region setup and save tick" />
-
-    <h3>Restrict Unscoped Traffic</h3>
-
-    <div class="step">1. Find <b>Packets without region scope</b></div>
-    <div class="step">2. Click <b>⋮</b> (top right)</div>
-    <div class="step">3. Select <b>Deny Flood</b></div>
-
-    <img class="image" src="assets/rptdeny.jpeg" alt="Deny flood setting on repeater" />
 
   </div>
 
@@ -179,11 +172,16 @@
     <h3>Per Channel</h3>
     <ul>
       <li>Open a channel</li>
-      <li>Use the top-right menu</li>
-      <li>Set the region/scope</li>
+      <li>Use the top-right menu <b>⋮</b></li>
+      <li>Click on Set Region Scope</li>
+      <li>Click the <b>+</b></li>
+      <li>Enter <code>yorkshire</code></li>
+      <li>Click on the tick (This should bring you back to the list)</li>
+      <li>Click on "Yorkshire" from the list, this should drop back to the channel</li>
     </ul>
+    <img class="image" src="assets/compregion.jpeg" alt="Companion region configuration" />
 
-    <h3>Per Device (Experimental)</h3>
+    <h3>Per Device (Experimental) MeshCore APP</h3>
     <ul>
       <li>Go to Settings → Experimental</li>
       <li>Assign a default region</li>
