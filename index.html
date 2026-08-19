@@ -1,563 +1,134 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meshcore Yorkshire — Network Stats, Getting Started & Community</title>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/index-CukJ1quw.css" data-rsc-css-href="/assets/index-CukJ1quw.css" data-precedence="vite-rsc/importer-resources"/><link rel="modulepreload" href="/assets/layout-segment-context-vyR6nUPw.js" crossorigin=""/><link rel="modulepreload" href="/assets/rolldown-runtime-S-ySWqyJ.js" crossorigin=""/><link rel="modulepreload" href="/assets/index-DEITpHOQ.js" crossorigin=""/><link rel="modulepreload" href="/assets/framework-CXnKph_e.js" crossorigin=""/><link rel="modulepreload" href="/assets/SiteNav-jOdxM94c.js" crossorigin=""/><title>MeshCore Yorkshire | Off-grid messaging across Yorkshire</title><meta name="description" content="Yorkshire&#x27;s community-built MeshCore network for resilient, off-grid LoRa messaging."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><script>self.__VINEXT_RSC_PARAMS__={}</script><script>self.__VINEXT_RSC_NAV__={"pathname":"/","searchParams":[]}</script><link rel="modulepreload" href="/assets/index-DEITpHOQ.js" />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2" as="font" type="font/woff2" crossorigin />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Meshcore Yorkshire is a volunteer LoRa mesh network across Yorkshire for short, secure text messaging on 868 MHz. See live network stats, get started, and join the community." />
-  <meta name="keywords" content="Meshcore Yorkshire, MeshCore, LoRa mesh, 868 MHz, off-grid messaging, resilient communications, Yorkshire mesh network, community radio, hilltop nodes, UK mesh, Web Flasher, network stats" />
-  <link rel="canonical" href="https://meshcoreyorkshire.uk/" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#0f1115" />
-  <meta name="format-detection" content="telephone=no,address=no,email=no" />
+.__font_geist_0tvmz3h { font-family: 'Geist', sans-serif; }
 
-  <!-- Performance hints -->
-  <link rel="preconnect" href="https://meshcore.io/flasher" crossorigin />
+.__variable_geist_0tvmz3h { --font-geist-sans: 'Geist', sans-serif; }
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
-  <meta property="og:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://meshcoreyorkshire.uk/" />
-  <meta property="og:site_name" content="Meshcore Yorkshire" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
-  <meta property="og:image:alt" content="Meshcore Yorkshire — live stats and community links" />
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Meshcore Yorkshire — Network Stats, Getting Started & Community" />
-  <meta name="twitter:description" content="Volunteer LoRa mesh across Yorkshire. Live stats, how to get started, and links to tools & the Facebook group." />
-  <meta name="twitter:image" content="https://meshcoreyorkshire.uk/assets/og-image.jpg" />
+.__font_geist_mono_1diim1n { font-family: 'Geist Mono', sans-serif; }
 
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+.__variable_geist_mono_1diim1n { --font-geist-mono: 'Geist Mono', sans-serif; }
+</style>
+</head><body class="__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased"><main><section class="hero" id="home"><header class="site-header"><div class="site-header-inner shell"><a class="brand" href="#home" aria-label="MeshCore Yorkshire home"><span class="radio-mark " aria-hidden="true"><i></i><b></b><em></em></span><span>MeshCore Yorkshire</span></a><nav class="desktop-nav" aria-label="Main navigation"><a href="#home">Home</a><details class="nav-group"><summary>Start here<span aria-hidden="true">⌄</span></summary><div class="nav-dropdown"><a href="#network">What is MeshCore?</a><a href="#start">Get started</a><a href="#hardware">Hardware</a><a href="#setup-tools">Apps &amp; firmware</a></div></details><details class="nav-group"><summary>Learn<span aria-hidden="true">⌄</span></summary><div class="nav-dropdown"><a href="#learn">How it works</a><a href="#node-roles">Node roles</a><a href="#first-test">Testing &amp; signals</a><a href="#placement">Repeater placement</a><a href="#regions">Regions</a><a href="#troubleshooting">Troubleshooting</a></div></details><details class="nav-group"><summary>Use it well<span aria-hidden="true">⌄</span></summary><div class="nav-dropdown"><a href="#adverts">Adverts</a><a href="#maintenance">Maintenance</a><a href="#privacy">Privacy &amp; security</a><a href="#uses">Yorkshire use cases</a><a href="#glossary">Glossary</a></div></details><a class="nav-join" href="#community">Join us</a></nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation"><span class="menu-toggle-label">Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button><div class="mobile-navigation " id="mobile-navigation" aria-hidden="true"><div class="mobile-menu-head"><span>Explore MeshCore Yorkshire</span><button type="button" aria-label="Close menu">×</button></div><a class="mobile-home" href="#home">Home</a><div class="mobile-group"><p>Start here</p><a href="#network">What is MeshCore?<span aria-hidden="true">→</span></a><a href="#start">Get started<span aria-hidden="true">→</span></a><a href="#hardware">Hardware<span aria-hidden="true">→</span></a><a href="#setup-tools">Apps &amp; firmware<span aria-hidden="true">→</span></a></div><div class="mobile-group"><p>Learn</p><a href="#learn">How it works<span aria-hidden="true">→</span></a><a href="#node-roles">Node roles<span aria-hidden="true">→</span></a><a href="#first-test">Testing &amp; signals<span aria-hidden="true">→</span></a><a href="#placement">Repeater placement<span aria-hidden="true">→</span></a><a href="#regions">Regions<span aria-hidden="true">→</span></a><a href="#troubleshooting">Troubleshooting<span aria-hidden="true">→</span></a></div><div class="mobile-group"><p>Use it well</p><a href="#adverts">Adverts<span aria-hidden="true">→</span></a><a href="#maintenance">Maintenance<span aria-hidden="true">→</span></a><a href="#privacy">Privacy &amp; security<span aria-hidden="true">→</span></a><a href="#uses">Yorkshire use cases<span aria-hidden="true">→</span></a><a href="#glossary">Glossary<span aria-hidden="true">→</span></a></div><a class="mobile-join" href="#community">Join MeshCore Yorkshire <span>→</span></a></div></div></header><div class="hero-content shell"><p class="eyebrow">MeshCore <span>•</span> Yorkshire</p><h1>Connecting Yorkshire,<br/>one node at a time.</h1><p class="hero-copy">A community-built MeshCore network for resilient, off-grid messaging across Yorkshire.</p><div class="hero-actions"><a class="button button--primary" href="#start">Get started <span class="arrow" aria-hidden="true">→</span></a><a class="button button--secondary" href="#network">Explore the network <span class="arrow" aria-hidden="true">→</span></a></div><div class="feature-rail" aria-label="Network highlights"><div><span class="feature-icon people" aria-hidden="true">●●●</span><strong>Community-led</strong></div><div><span class="feature-icon mast" aria-hidden="true">⌁</span><strong>Off-grid ready</strong></div><div><span class="feature-icon county" aria-hidden="true">◇</span><strong>Yorkshire-wide</strong></div></div></div><a class="scroll-cue" href="#network" aria-label="Scroll to learn more">Discover <span>↓</span></a></section><section class="section intro" id="network"><div class="shell section-grid"><div><p class="eyebrow">Built by the community</p><h2>Messages that keep moving when the internet doesn’t.</h2></div><div class="prose"><p>MeshCore uses low-power LoRa radios to pass short text messages from node to node. No mobile signal, subscription or central service is needed.</p><p>MeshCore Yorkshire brings local operators together to extend useful coverage, share knowledge and help more people get connected.</p></div></div><div class="shell cards"><article><span>01</span><h3>Long-range LoRa</h3><p>Low-power radio links designed for practical messaging over challenging terrain.</p></article><article><span>02</span><h3>Store and forward</h3><p>Repeaters help messages travel beyond the direct range of a single device.</p></article><article><span>03</span><h3>No licence required</h3><p>Built around licence-exempt devices operating within UK radio regulations.</p></article></div></section><section class="section how" id="start"><div class="shell"><p class="eyebrow">Getting started</p><h2>Everything you need to join MeshCore Yorkshire.</h2><p class="section-lead">You do not need an amateur radio licence or a complicated station. A compatible LoRa device, the MeshCore firmware and the same radio settings as the local network are enough to get started.</p><div class="steps"><article><b>1</b><div><h3>Choose your hardware</h3><p>For everyday messaging, choose a companion device that connects to your phone by Bluetooth. A screen-and-keyboard device can operate by itself. Fixed repeaters are for extending coverage rather than sending messages.</p></div></article><article><b>2</b><div><h3>Install MeshCore</h3><p>Flash the correct MeshCore firmware for your board, then install the MeshCore companion app on your phone. Give your node a recognisable name and set its role to Companion.</p></div></article><article><b>3</b><div><h3>Apply the Yorkshire settings</h3><p>Use the UK frequency and matching LoRa parameters below. Every value must match; a node on a different frequency, bandwidth, spreading factor or coding rate will not hear the network.</p></div></article></div><div class="setup-grid"><article class="setup-card settings-card"><p class="card-kicker">Yorkshire radio profile</p><h3>UK frequency settings</h3><dl class="radio-settings"><div><dt>Preset</dt><dd>UK (Narrow)</dd></div><div><dt>Frequency</dt><dd>869.618 MHz</dd></div><div><dt>Bandwidth</dt><dd>62.5 kHz</dd></div><div><dt>Spreading factor</dt><dd>SF8</dd></div><div><dt>Coding rate</dt><dd>8</dd></div></dl><p class="small-print">This is the shared profile used by MeshCore Yorkshire. Stay within the UK licence-exempt power and duty-cycle limits for your equipment and installation.</p></article><article class="setup-card channel-card"><p class="card-kicker">Meet the local network</p><h3>Join <span>#Yorkshire</span></h3><p><strong>#Yorkshire</strong> is the public community channel for local chat, coverage reports, testing and getting help from other node operators.</p><ol><li>Open Channels in the companion app.</li><li>Add or discover the channel named <strong>#Yorkshire</strong>.</li><li>Send a short introduction with your name and area.</li></ol><p class="small-print">Direct messages are private between contacts; public channel messages may be seen and repeated by other nodes across the mesh.</p></article></div><div class="setup-links" id="setup-tools" aria-label="MeshCore setup links"><div><p class="card-kicker">Start here</p><h3>From unopened box to first message.</h3></div><div class="setup-link-grid"><a href="https://flasher.meshcore.io/" target="_blank" rel="noreferrer"><span>1</span><strong>Flash your device</strong><small>Install the correct Companion, Repeater or Room Server firmware.</small><span class="arrow" aria-hidden="true">→</span></a><a href="https://apps.apple.com/gb/app/meshcore/id6742354151" target="_blank" rel="noreferrer"><span>2</span><strong>Get the iPhone app</strong><small>Install MeshCore from the UK Apple App Store.</small><span class="arrow" aria-hidden="true">→</span></a><a href="https://play.google.com/store/apps/details?id=com.liamcottle.meshcore.android" target="_blank" rel="noreferrer"><span>2</span><strong>Get the Android app</strong><small>Install the companion application from Google Play.</small><span class="arrow" aria-hidden="true">→</span></a><a href="https://app.meshcore.nz/" target="_blank" rel="noreferrer"><span>3</span><strong>Open the web client</strong><small>Use a compatible device through a supported browser.</small><span class="arrow" aria-hidden="true">→</span></a></div></div><div class="hardware-guide" id="hardware"><div class="hardware-heading"><p class="card-kicker">Choosing a device</p><h3>Which hardware do I need?</h3><p>Start with one companion node. Add a repeater only when you understand your local coverage and have a genuinely useful location for it.</p></div><div class="hardware-options"><article><span>Best first device</span><h4>Phone companion</h4><p>A small LoRa board links to the MeshCore app over Bluetooth. It is the simplest and most flexible way to send messages, manage contacts and use channels.</p><small>Examples include supported Heltec, LilyGo and Seeed Studio boards.</small></article><article><span>Standalone</span><h4>Screen &amp; keyboard</h4><p>Devices such as a T-Deck let you read and type messages without using a phone. They are portable and convenient, but usually cost more.</p><small>Choose the correct 868 MHz version for UK use.</small></article><article><span>Extend coverage</span><h4>Repeater</h4><p>A fixed, powered node relays packets for others. Height, a clear view and a quiet radio location matter more than maximum transmit power or a huge antenna.</p><small>Outdoor repeaters need weatherproofing, reliable power and a responsible installation.</small></article></div></div><div class="start-cta"><a class="button button--primary" href="#community">Join the Yorkshire community <span class="arrow" aria-hidden="true">→</span></a><p>Once configured, leave your node running for a few minutes so it can hear advertisements and discover nearby contacts.</p></div></div></section><section class="section learn" id="learn"><div class="shell"><div class="section-grid learn-intro"><div><p class="eyebrow">How the mesh works</p><h2>More than radios shouting into the air.</h2></div><div class="prose"><p>Your companion learns which repeaters can reach a contact and sends a short encrypted packet along a suitable path. Repeaters forward it; Room Servers provide a shared place where messages can be stored and collected later.</p><p>Coverage is never guaranteed. Terrain, buildings, antenna position, interference and the nodes currently online all affect whether a path is available.</p></div></div><div class="role-grid" id="node-roles" aria-label="MeshCore node roles"><article><span>Carry</span><h3>Companion</h3><p>Your personal identity on the mesh. It connects to the app or provides its own screen and keyboard, manages contacts and sends direct or channel messages.</p></article><article><span>Relay</span><h3>Repeater</h3><p>Unattended infrastructure that forwards packets. It does not replace your companion and is most valuable in a high, clear and reliable location.</p></article><article><span>Store</span><h3>Room Server</h3><p>A persistent meeting place that can hold room messages for users to retrieve. It serves a different purpose from a pure coverage repeater.</p></article></div><div class="field-guide" id="first-test"><div class="field-copy"><p class="card-kicker">A useful first test</p><h3>Prove the basics before chasing distance.</h3><ol class="checklist"><li><b>Start nearby.</b><span>Place two companion devices a few metres apart and confirm both use the Yorkshire radio profile.</span></li><li><b>Wait for discovery.</b><span>Leave both powered for several minutes so advertisements and contacts have time to appear.</span></li><li><b>Send direct first.</b><span>Exchange a short direct message, then try <strong>#Yorkshire</strong> and note whether delivery is confirmed.</span></li><li><b>Add one variable.</b><span>Increase distance or introduce a repeater only after the simple link works reliably.</span></li></ol></div><aside class="signal-card"><p class="card-kicker">Understanding signal figures</p><h3>RSSI and SNR</h3><p><strong>RSSI</strong> is received signal strength. A value closer to zero is stronger, but strong RSSI alone does not guarantee clean reception.</p><p><strong>SNR</strong> compares the wanted LoRa signal with noise. Positive is clean; LoRa can still decode some signals below zero.</p><p class="small-print">Treat both as clues, not pass/fail scores. Packet delivery is the result that matters.</p></aside></div><div class="placement" id="placement"><div><p class="card-kicker">Building useful coverage</p><h3>Height first. Power second.</h3><p>A modest repeater with a clear view will often outperform a powerful node hidden behind walls or surrounded by electrical noise. Plan for reliability, not an impressive bench-test figure.</p></div><div class="placement-points"><article><b>01</b><h4>Choose the site</h4><p>Look for legal access, clear horizons, safe maintenance and a location where the node benefits more than one household.</p></article><article><b>02</b><h4>Keep RF losses low</h4><p>Use a suitable 868 MHz antenna, short low-loss feed where possible, sound connectors and separation from noisy electronics.</p></article><article><b>03</b><h4>Make it dependable</h4><p>Weatherproof outdoor equipment, provide battery margin for poor weather and keep a record of firmware, settings and admin access.</p></article></div></div><div class="regions-guide" id="regions"><div class="regions-heading"><p class="card-kicker">Repeater configuration</p><h3>Regions keep local traffic useful.</h3><p>Regions tell a repeater which scoped flood traffic it should forward. Use <code>yorkshire</code> as the primary region, with the neighbouring regional identifiers below added as extras.</p></div><div class="region-cards" aria-label="Recommended repeater regions"><article><span>Primary region</span><code>yorkshire</code><p>The main Yorkshire community scope.</p></article><article><span>Extra region</span><code>eng-yh</code><p>The England–Yorkshire and the Humber regional scope.</p></article><article><span>Extra region</span><code>eng-ne</code><p>The North East England scope, useful for cross-boundary paths.</p></article><article><span>Extra region</span><code>gb-eng-nw</code><p>The North West England scope, useful for routes across the Pennines.</p></article></div><div class="command-panel"><div><p class="card-kicker">Suggested CLI sequence</p><h4>Add and allow the primary region and three extras</h4><p>Log in to the repeater, open its CLI and enter one command at a time. Wait for an <code>OK</code> response after every command. The final command saves the region configuration permanently.</p><a class="text-link" href="https://github.com/MichaelMeshBrad/MCYorks/wiki/Suggested-Meshcore-Repeater-Commands" target="_blank" rel="noreferrer">Read the complete Yorkshire repeater guide <span class="arrow" aria-hidden="true">→</span></a></div><pre aria-label="MeshCore region commands"><code>region put yorkshire
+region allowf yorkshire
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Meshcore Yorkshire",
-    "url": "https://meshcoreyorkshire.uk/",
-    "logo": "https://meshcoreyorkshire.uk/assets/logo.png",
-    "image": "https://meshcoreyorkshire.uk/assets/og-image.jpg",
-    "sameAs": ["https://www.facebook.com/groups/1345606723386562"],
-    "areaServed": "GB-ENG",
-    "keywords": ["Meshcore Yorkshire","LoRa mesh","868 MHz","off-grid messaging","resilient communications","Yorkshire mesh network","network stats"]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Meshcore Yorkshire",
-    "url": "https://meshcoreyorkshire.uk/",
-    "inLanguage": "en-GB",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Meshcore Yorkshire",
-      "logo": {"@type": "ImageObject","url": "https://meshcoreyorkshire.uk/assets/logo.png"}
-    }
-  }
-  </script>
+region put eng-yh
+region allowf eng-yh
 
-  <style>
-    :root{
-      --bg:#0f1115;
-      --bg-soft:#121419;
-      --card:#151924;
-      --border:#222735;
-      --text:#e7ecf3;
-      --muted:#a7b3c6;
-      --brand:#5aa7ff;
-      --brand-2:#7dd3fc;
-      --accent:#8b5cf6;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius:14px;
-      --container: 1200px;
-      --section-pad: 36px;
-      --section-pad-sm: 26px;
-      --grid-gap: 18px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    img{max-width:100%;height:auto}
-    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
-    .btn{display:inline-block;background:linear-gradient(180deg, var(--brand), var(--brand-2));color:#00131e;padding:12px 18px;font-weight:800;border-radius:999px;box-shadow:var(--shadow)}
-    .btn.secondary{background:#1c2333;color:var(--text);border:1px solid var(--border)}
-    .btn.block{display:block;text-align:center}
-    .btn.lg{padding:14px 20px;font-size:1.02rem}
-    header.site{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.75);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    nav.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:36px;width:auto}
-    .nav-links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .nav-links a{padding:8px 12px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
-    .nav-links a:hover{background:#1a1f2b;border-color:var(--border);text-decoration:none}
-    @media (max-width:920px){.nav-links{display:none}details.menu{display:block}}
-    details.menu{display:none}
-    details.menu summary{list-style:none;cursor:pointer;padding:8px 12px;border:1px solid var(--border);border-radius:999px}
-    details[open] summary{background:#1a1f2b}
-    details.menu .panel{margin-top:8px;background:#111522;border:1px solid var(--border);border-radius:var(--radius);padding:10px}
-    details.menu .panel a{display:block;padding:8px 10px;border-radius:8px}
-    details.menu .panel a:hover{background:#1a1f2b;text-decoration:none}
-    /* Hero */
-    .hero{border-bottom:1px solid var(--border);padding:var(--section-pad) 0 var(--section-pad-sm)}
-    .hero h1{font-size:clamp(2rem,2.3vw + 1rem,2.8rem);margin:0 0 6px 0;line-height:1.14;letter-spacing:.2px}
-    .strap{font-size:.95rem;color:var(--muted);max-width:62ch;margin:0}
-    .ctas{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    .hero-line{margin-top:12px;color:var(--muted);font-weight:700;letter-spacing:.2px;opacity:.95}
-    .hero-line .dot{margin:0 .5ch;opacity:.7}
-    .mission{margin-top:10px;color:var(--muted);max-width:80ch;line-height:1.6;border-left:3px solid rgba(125,211,252,.35);padding-left:12px}
-    /* Section heading accent */
-    .section-title{font-size:1.22rem;margin:0 0 10px 0;position:relative}
-    .section-title:after{
-      content:"";display:block;width:72px;height:2px;margin-top:8px;
-      background: linear-gradient(90deg, var(--brand), var(--accent));opacity:.7;border-radius:999px
-    }
-    /* Generic sections */
-    section{padding:var(--section-pad) 0;border-bottom:1px solid var(--border)}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:var(--grid-gap)}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
-    .card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45);border-color:#2b3347}
-    .card h3{margin:0 0 6px 0;font-size:1.02rem}
-    .card p{margin:0;color:var(--muted)}
-    /* Steps */
-    .steps{counter-reset:s}
-    .step{position:relative;padding-left:40px;margin-bottom:10px}
-    .step::before{
-      counter-increment:s; content: counter(s);
-      position:absolute; left:0; top:2px; width:28px; height:28px; border-radius:50%;
-      background:linear-gradient(180deg, var(--brand), var(--brand-2)); color:#00131e;
-      display:grid; place-items:center; font-weight:800; border:1px solid #0e1624; box-shadow:var(--shadow)
-    }
-    /* Back to top (floating) */
-    .backtop{
-      position:fixed; right:18px; bottom:18px; z-index:999; display:none;
-      background:#1c2333; color:var(--text); border:1px solid var(--border);
-      padding:10px 14px; border-radius:999px; box-shadow:var(--shadow); font-weight:800
-    }
-    .backtop:focus-visible{outline:2px solid white; outline-offset:3px}
-    @media (max-width:520px){ .backtop{right:14px; bottom:14px} }
-    /* Footer */
-    footer{padding:22px 0;background:var(--bg-soft);color:var(--muted)}
-    .footer-grid{display:grid;gap:12px;grid-template-columns:1fr auto}
-    @media (max-width:800px){.footer-grid{grid-template-columns:1fr} .footer-grid div:last-child{text-align:left}}
-    .legal{font-size:.9rem}
+region put eng-ne
+region allowf eng-ne
 
-    /* Stats panel */
-    .mx-stats { 
-      background: var(--card); 
-      padding: clamp(1.25rem, 2vw, 2rem); 
-      border-radius: var(--radius); 
-      border: 1px solid var(--border); 
-      box-shadow: var(--shadow);
-    }
-    .mx-stats h2 {
-      color: var(--brand-2);
-      text-align: center;
-      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
-      margin: 0 0 1rem 0;
-      letter-spacing: .3px;
-    }
-    .mx-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap: clamp(.8rem, 1.5vw, 1.2rem);
-    }
-    @media (max-width: 900px) { .mx-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 520px) { .mx-grid { grid-template-columns: 1fr; } }
+region put gb-eng-nw
+region allowf gb-eng-nw
 
-    .mx-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: .9rem;
-      padding: 1rem;
-      text-align: center;
-      transform: translateY(6px);
-      opacity: 0;
-      animation: mx-fadeUp .6s ease forwards;
-    }
-    .mx-card:nth-child(2){ animation-delay: .06s; }
-    .mx-card:nth-child(3){ animation-delay: .12s; }
-    .mx-card:nth-child(4){ animation-delay: .18s; }
-
-    .mx-icon {
-      width: 40px; height: 40px; 
-      margin: 0 auto .5rem;
-      color: var(--brand);
-      opacity: .95;
-    }
-    .mx-icon svg { width: 100%; height: 100%; }
-
-    .mx-value {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.1;
-      letter-spacing: .5px;
-    }
-    .mx-label {
-      margin-top: .25rem;
-      font-size: .95rem;
-      color: var(--muted);
-    }
-    .mx-subtle {
-      margin: .9rem 0 0 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    @keyframes mx-fadeUp {
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
-</head>
-<body id="top">
-  <header class="site" role="banner">
-    <div class="container">
-      <nav class="bar" aria-label="Primary navigation">
-        <div class="brand">
-          <img src="/assets/logo.png" alt="Meshcore Yorkshire logo" />
-        </div>
-        <div class="nav-links" role="navigation" aria-label="Top links">
-          <a href="#stats">Stats</a>
-          <a href="#about">About</a>
-          <a href="#start">Get started</a>
-          <a href="https://meshcoreyorkshire.uk/regions">Region Guide</a>
-          <a href="#links">Project Links</a>
-          <a href="https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md" target="_blank" rel="noopener">FAQ</a>
-          <a href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook</a>
-        </div>
-        <details class="menu">
-          <summary aria-label="Open menu">Menu</summary>
-          <div class="panel" role="menu">
-            <a role="menuitem" href="#stats">Stats</a>
-            <a role="menuitem" href="#about">About</a>
-            <a role="menuitem" href="#start">Get started</a>
-            <a role="menuitem" href="https://meshcoreyorkshire.uk/regions">Region Guide</a>
-            <a role="menuitem" href="#links">Project Links</a>
-            <a role="menuitem" href="https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md" target="_blank" rel="noopener">FAQ</a>
-            <a role="menuitem" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        </details>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" role="main">
-    <!-- Hero -->
-    <section class="hero" id="top-hero">
-      <div class="container">
-        <h1>Meshcore Yorkshire</h1>
-        <p class="strap">Community-run MeshCore group across Yorkshire</p>
-        <div class="ctas">
-          <a class="btn lg" href="#stats">View network stats</a>
-          <a class="btn secondary lg" href="#start">How to get started</a>
-          <a class="btn secondary lg" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener">Facebook Group</a>
-        </div>
-        <div class="hero-line">
-          <span>Get connected</span><span class="dot">•</span>
-          <span>Help expand coverage</span><span class="dot">•</span>
-          <span>Stay resilient</span>
-        </div>
-        <p class="mission">
-          MeshCore Yorkshire is a volunteer effort to build practical, low‑power radio coverage across the county
-          for short, secure text messaging and situational awareness — useful at events, on the hills, and when
-          phone networks are busy or down.
-        </p>
-      </div>
-    </section>
-
-    <!-- Stats (replaces Internet Map) -->
-    <section class="map-section" id="stats" aria-labelledby="mx-stats-title">
-      <div class="container">
-        <div class="mx-stats">
-          <h2 id="mx-stats-title">Yorkshire Mesh Network Stats</h2>
-
-          <div class="mx-grid">
-            <!-- Companions -->
-            <article class="mx-card">
-              <div class="mx-icon" aria-hidden="true">
-                <!-- Users icon -->
-                <svg viewBox="0 0 24 24" fill="none"><path d="M16 14c2.761 0 5 2.239 5 5v1H3v-1c0-2.761 2.239-5 5-5h8Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <div class="mx-value" data-target="78">0</div>
-              <div class="mx-label">Companions</div>
-            </article>
-
-            <!-- Repeaters -->
-            <article class="mx-card">
-              <div class="mx-icon" aria-hidden="true">
-                <!-- Tower icon -->
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v6m0 8v6M5 9l7-1 7 1M8 22h8M6 17l12-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div class="mx-value" data-target="110">0</div>
-              <div class="mx-label">Repeaters</div>
-            </article>
-
-            <!-- Rooms -->
-            <article class="mx-card">
-              <div class="mx-icon" aria-hidden="true">
-                <!-- Rooms / channels icon -->
-                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="4" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="14" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <div class="mx-value" data-target="8">0</div>
-              <div class="mx-label">Rooms</div>
-            </article>
-
-            <!-- Total Nodes -->
-            <article class="mx-card">
-              <div class="mx-icon" aria-hidden="true">
-                <!-- Network / nodes icon -->
-                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="5" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="19" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 7.5 6.5 17M13.5 7.5l4 9.5M8 19h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div class="mx-value" data-target="196">0</div>
-              <div class="mx-label">Total Nodes</div>
-            </article>
-          </div>
-          <p class="mx-subtle">Last updated: Jan 2026</p>
-        </div>
-<div class="mx-card coverage-card" style="margin-top:16px; padding:0; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,.25); border:1px solid var(--border); transition: transform 0.15s ease, box-shadow 0.15s ease;">
-  <h3 style="margin:12px 0; color:var(--brand-2); font-size:1.1rem;">Coverage Map</h3>
-  <img src="/assets/coverage-map.png" alt="Yorkshire Mesh Network Coverage Map" 
-       style="width:100%; max-width:100%; height:auto; border-radius:var(--radius); display:block;"/>
-  <p class="mx-subtle" style="margin:8px 0 12px 0;">Current mesh network coverage across Yorkshire</p>
-</div>
-
-<style>
-  /* Hover effect for coverage card */
-  .coverage-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(0,0,0,.45);
-    border-color: #2b3347;
-  }
-</style>      
-</div>
-    </section>
-
-    <!-- About MeshCore -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About MeshCore</h2>
-        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
-          <a class="card" href="https://meshcore.io/" target="_blank" rel="noopener">
-            <h3>About MeshCore</h3>
-            <p>Overview, goals and FAQs.</p>
-          </a>
-          <a class="card" href="https://meshcore.io/" target="_blank" rel="noopener">
-            <h3>Main MeshCore Website (Run by the Official Dev's)</h3>
-            <p>Downloads, docs and news.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Getting Started -->
-    <section id="start">
-      <div class="container">
-        <h2 class="section-title">Get started in Yorkshire</h2>
-        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
-          <div class="card">
-            <div class="steps">
-              <div class="step">
-                <h3>Get a device</h3>
-                <p class="muted">Pick a LoRa-capable device supported by MeshCore.</p>
-              </div>
-              <div class="step">
-                <h3>Flash MeshCore</h3>
-                <p class="muted">Install the latest stable firmware. Use the official web flasher.</p>
-              </div>
-              <div class="step">
-                <h3>Set EU/UK "Narrow" Preset</h3>
-                <p class="muted">Use Freq:869.618, BW:62.5, SF:8, CR:8 for compatibility across Yorkshire.</p>
-              </div>
-              <div class="step">
-                <h3>Place your node</h3>
-                <p class="muted">Higher is better. Windowsills, lofts, hilltops—line-of-sight helps your neighbours.</p>
-              </div>
-		<div class="step">
-		<h3>Join the “Yorkshire” channel</h3>
-		<p class="muted">Within the app, go to the <em>Add Channel</em> section, choose <em>Join Hashtag Channel</em>, and in the channel name box, enter <strong>yorkshire</strong> (it’s a <code>#</code> channel).</p>
-		</div>
-              <div class="step">
-                <h3>Say hello</h3>
-                <p class="muted">Send a message to default "Public" Channel and say Hi!, don't forget to spread the word!</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Quick links</h3>
-            <ul class="muted" style="margin-top:8px;display:grid;gap:6px">
-              <li><a href="https://meshcoreyorkshire.uk/links">Meshcore Yorkshire — Project Links</a></li>
-              <li><a href="https://meshcore.io/flasher" target="_blank" rel="noopener">Web Flasher</a></li>
-              <li><a href="https://meshcore.io/" target="_blank" rel="noopener">Main MeshCore Website</a></li>
-              <li><a href="https://meshcore.io/" target="_blank" rel="noopener">About MeshCore</a></li>
-              <li><a href="https://docs.meshcore.io/" target="_blank" rel="noopener">MeshCore DOCS DB</a></li>
-              <li><a href="https://analyzer.letsme.sh/" target="_blank" rel="noopener">LetsMesh Packet Analyzer</a></li>
-              <li><a href="https://files.brazio.org/meshcore/nightly/" target="_blank" rel="noopener">Meshcore Firmware (Nightly Builds)</a></li>
-	      <li><a href="https://yorkshiremesh.org" target="_blank" rel="noopener">Yorkshire Mesh Radio Club (YMRC)</a></li>
-            </ul>
-            <blockquote style="margin-top:10px">
-              “From the Dales to the Pennines, Meshcore Yorkshire gives us a way to keep in touch when everything else drops.”
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Links (cards like About) -->
-    <section id="links">
-      <div class="container">
-        <h2 class="section-title">Project Links</h2>
-        <div class="grid cols-2" style="margin-top:var(--grid-gap)">
-          <a class="card" href="https://meshcoreyorkshire.uk/links">
-            <h3>Meshcore Yorkshire — Links</h3>
-            <p>Handy links for the local project.</p>
-          </a>
-          <a class="card" href="https://meshcore.io/flasher" target="_blank" rel="noopener">
-            <h3>Web Flasher</h3>
-            <p>Flash MeshCore to your device in the browser.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Community -->
-<section id="community">
-  <div class="container">
-    <h2 class="section-title">Community</h2>
-    <div class="grid cols-2" style="margin-top:var(--grid-gap)">
-      <div class="card">
-        <h3>Facebook Group</h3>
-        <p class="muted">Chat with other Yorkshire nodes, plan installs, and share coverage wins.</p>
-        <a class="btn lg block" href="https://www.facebook.com/groups/1345606723386562" target="_blank" rel="noopener" style="margin-top:12px">Join the Facebook Group</a>
-        
-        <h3 style="margin-top:14px">Project Links</h3>
-        <p class="muted">Device guides, flashing tools, and local resources — all in one place.</p>
-        <a class="btn lg block" href="https://meshcoreyorkshire.uk/links" style="margin-top:8px">Project Links</a>
-        
-        <h3 style="margin-top:14px">Discord</h3>
-        <p class="muted">Chat live with other Yorkshire Mesh users on Discord.</p>
-        <a class="btn lg block" href="https://discord.com/channels/1343693475589263471/1391912513737593033" target="_blank" rel="noopener" style="margin-top:8px">Join Discord</a>
-        
-        <h3 style="margin-top:14px">Telegram</h3>
-        <p class="muted">Stay connected on the go with our Telegram group.</p>
-        <a class="btn lg block" href="https://t.me/+PUC01F7vyCBkNWJk" target="_blank" rel="noopener" style="margin-top:8px">Join Telegram</a>
-        
-        <h3 style="margin-top:14px">Yorkshire Mesh Radio Club</h3>
-        <p class="muted">YMRC, Radio, LORA Join Us to find out more</p>
-        <a class="btn lg block" href="https://yorkshiremesh.org" target="_blank" rel="noopener" style="margin-top:8px">Join YMRC</a>
-      </div>
-          <div class="card">
-            <h3>Contact</h3>
-            <p class="muted">No data is stored by us — your message is sent via your email app.</p>
-            <form action="mailto:info@meshcoreyorkshire.co.uk" method="post" enctype="text/plain">
-              <div style="display:grid;gap:10px">
-                <label>
-                  <span class="visually-hidden">Your name</span>
-                  <input name="name" type="text" placeholder="Your name" required
-                         style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)">
-                </label>
-                <label>
-                  <span class="visually-hidden">Your email</span>
-                  <input name="email" type="email" placeholder="Your email" required
-                         style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)">
-                </label>
-                <label>
-                  <span class="visually-hidden">Message</span>
-                  <textarea name="message" rows="4" placeholder="How can we help?" required
-                            style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0d10;color:var(--text)"></textarea>
-                </label>
-                <button type="submit" class="btn block">Send via email</button>
-              </div>
-            </form>
-            <p class="muted" style="margin-top:10px;font-size:.9rem">Prefer direct? Email <a href="mailto:info@meshcoreyorkshire.co.uk">info@meshcoreyorkshire.co.uk</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="muted">Built with ❤️ by volunteers for volunteers.</div>
-        <div class="muted legal" style="margin-top:6px">
-          © 2025 Meshcore Yorkshire Community. Site code is released under the
-          <a href="/LICENSE" target="_blank" rel="noopener">MIT License</a>.
-        </div>
-        <div class="muted legal" style="margin-top:6px">
-          Meshcore Yorkshire is part of the wider MeshCore network and run independently by local volunteers.
-          No warranties; use at your own risk. Logos and names remain the property of their respective owners.
-        </div>
-      </div>
-      <div style="text-align:right">
-        <a href="#top">↑ Back to top</a> ·
-        <a href="https://meshcoreyorkshire.uk/links">Project Links</a> ·
-        <a href="https://docs.meshcore.io/" target="_blank" rel="noopener">About MeshCore</a> ·
-        <a href="https://meshcore.io" target="_blank" rel="noopener">Main Site</a> ·
-        <a href="https://yorkshiremesh.org" target="_blank" rel="noopener">Yorkshire Mesh Radio Club</a> ·
-        <a href="mailto:info@meshcoreyorkshire.co.uk">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#top" class="backtop" id="backTop" aria-label="Back to top">↑ Top</a>
-
-  <script>
-    // Count-up on first view (tiny, dependency-free)
-    (function(){
-      const els = document.querySelectorAll('.mx-value');
-      if(!('IntersectionObserver' in window)) { els.forEach(n => n.textContent = n.dataset.target); return; }
-      const ease = t => 1 - Math.pow(1 - t, 3);
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(!entry.isIntersecting) return;
-          const el = entry.target;
-          io.unobserve(el);
-          const target = parseInt(el.dataset.target, 10) || 0;
-          const dur = 900; // ms
-          let start = null;
-          function step(ts){
-            if(!start) start = ts;
-            const p = Math.min((ts - start) / dur, 1);
-            el.textContent = Math.round(target * ease(p));
-            if(p < 1) requestAnimationFrame(step);
-          }
-          requestAnimationFrame(step);
-        });
-      }, { threshold: 0.35 });
-      els.forEach(el => io.observe(el));
-    })();
-
-    // Back-to-top show/hide on scroll
-    (function(){
-      const btn = document.getElementById('backTop');
-      function onScroll(){
-        if(window.scrollY > 320){ btn.style.display = 'inline-block'; }
-        else { btn.style.display = 'none'; }
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-  </script>
-
-  <style>
-    /* Screen-reader only utility */
-    .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;clip:rect(0 0 0 0);overflow:hidden}
-    .legal{font-size:.9rem}
-  </style>
-</body>
-</html>
+region save</code></pre></div><p class="regions-note"><strong>Suggested, not one-size-fits-all:</strong> these regions have been recommended for Yorkshire repeaters, but an operator may need different settings for their location and neighbouring network. Region identifiers are case-sensitive; enter them exactly as shown.</p></div><div class="troubleshoot" id="troubleshooting"><div><p class="eyebrow">Quick checks</p><h3>Can’t see nodes or deliver a message?</h3></div><div class="fault-list"><details><summary>Nothing appears in Contacts</summary><p>Confirm the device has Companion firmware, Bluetooth is connected, the antenna is fitted, and frequency, bandwidth, SF and CR exactly match the Yorkshire profile. Then wait several minutes outdoors or near a window.</p></details><details><summary>I can receive, but messages do not deliver</summary><p>Reception does not prove there is a return path. Move to a clearer position, allow path discovery to update and test a nearby contact before assuming the repeater is faulty.</p></details><details><summary>The web flasher cannot find my board</summary><p>Use Chrome or Edge on a computer, try a known data-capable USB cable and select the exact hardware model. Many USB cables provide charging only.</p></details><details><summary>My repeater performs worse than expected</summary><p>Check noise level, antenna and connector losses, nearby electronics, enclosure placement and power stability. More transmit power cannot repair poor reception or a blocked site.</p></details></div></div><div class="uk-note"><div><p class="card-kicker">Responsible UK operation</p><h3>Licence-exempt does not mean unrestricted.</h3></div><div><p>Use 868 MHz hardware and operate within the power, spectrum-access and duty-cycle conditions that apply to the chosen sub-band. Antenna gain and any amplifier count towards radiated power. Install repeaters only with the landowner’s permission and never where they could create a safety or access risk.</p><p>MeshCore Yorkshire is a community communications network, not an emergency service and not a replacement for 999.</p></div></div><div class="resources"><div><p class="eyebrow">UK resources</p><h3>Explore, plan and read further.</h3></div><div class="resource-links"><a href="https://m3sh.uk/contacts/" target="_blank" rel="noreferrer"><span>UK network view</span><strong>Explore reported nodes on M3SH</strong><span class="arrow" aria-hidden="true">→</span></a><a href="https://localmesh.co.uk/meshcore-setup/" target="_blank" rel="noreferrer"><span>Beginner guide</span><strong>Read a British setup walkthrough</strong><span class="arrow" aria-hidden="true">→</span></a><a href="https://localmesh.co.uk/meshcore-repeater-setup/" target="_blank" rel="noreferrer"><span>Infrastructure</span><strong>Read the UK repeater guide</strong><span class="arrow" aria-hidden="true">→</span></a><a href="https://www.ofcom.org.uk/siteassets/resources/documents/spectrum/interface-requirements/ir-2030.pdf" target="_blank" rel="noreferrer"><span>Official requirements</span><strong>Read Ofcom IR 2030</strong><span class="arrow" aria-hidden="true">→</span></a></div></div></div></section><section class="section essentials" id="essentials"><div class="shell"><div class="section-grid essentials-intro"><div><p class="eyebrow">Using it well</p><h2>The details that turn a radio into a useful network.</h2></div><div class="prose"><p>Getting firmware onto a device is only the beginning. Good discovery habits, sensible repeater maintenance and clear expectations make MeshCore Yorkshire more reliable for everyone.</p></div></div><div class="advert-guide" id="adverts"><div><p class="card-kicker">Finding other people</p><h3>Adverts introduce your node.</h3><p>An advert announces your node identity so other companions can add you as a contact and learn how to reach you. Both ends may need to advertise before reliable direct messaging is possible.</p></div><div class="advert-options"><article><span>Nearby introduction</span><h4>Zero-hop advert</h4><p>Heard only by nodes within direct radio range. Use this for local testing and introductions without asking repeaters to forward it.</p></article><article><span>Wider introduction</span><h4>Flood advert</h4><p>Forwarded by repeaters within the configured limits. Use occasionally when you genuinely need to announce across the wider mesh.</p></article></div><p class="good-practice"><strong>Good practice:</strong> advertise once, wait for the mesh to respond and avoid repeatedly flooding adverts. More adverts do not create better coverage; they consume shared airtime.</p></div><div class="maintenance-grid" id="maintenance"><div class="maintenance-copy"><p class="card-kicker">For repeater operators</p><h3>Maintain it like shared infrastructure.</h3><p>A remote repeater should be documented and recoverable. Make changes deliberately, keep known-good settings and plan physical maintenance before a fault occurs.</p></div><ul class="maintenance-list"><li><b>Record the build</b><span>Board model, radio profile, regions, firmware version, antenna, power system and installation date.</span></li><li><b>Protect access</b><span>Change default admin credentials, retain them securely and back up the node’s private key where supported.</span></li><li><b>Update carefully</b><span>Review stable firmware periodically, save the current configuration and avoid risky remote updates when recovery is difficult.</span></li><li><b>Inspect the site</b><span>Check enclosure seals, condensation, connectors, cable strain, antenna condition and battery or solar performance.</span></li><li><b>Retest afterwards</b><span>Verify the Yorkshire radio profile, regions, adverts and actual two-way packet delivery after any reset or reflash.</span></li></ul></div><div class="privacy-panel" id="privacy"><div><p class="card-kicker">Privacy &amp; security</p><h3>Know what other nodes can see.</h3></div><div class="privacy-grid"><article><b>Public means public</b><p>Messages posted to <strong>#Yorkshire</strong> may be received and repeated across the community network. Never post confidential or sensitive personal information.</p></article><article><b>Choose a sensible identity</b><p>Node names and adverts are visible to others. Avoid including a home address, telephone number or other unnecessary personal details.</p></article><article><b>Share location deliberately</b><p>Only publish precise coordinates when appropriate. Infrastructure locations may reveal private homes or restricted sites.</p></article><article><b>Protect your node identity</b><p>A private key identifies the node. Keep backups securely where supported; a full erase may generate a new identity and break existing contacts.</p></article><article><b>Private is not infallible</b><p>Direct messaging provides privacy features, but MeshCore is a community radio system—not a guaranteed secure or emergency communications service.</p></article><article><b>Report problems responsibly</b><p>If you discover abuse, unsafe infrastructure or a security concern, contact the project without publishing sensitive details in a public channel.</p></article></div></div><div class="use-cases" id="uses"><div><p class="eyebrow">Made for Yorkshire</p><h3>What could you use it for?</h3></div><div class="use-grid"><article><span>01</span><h4>Walking &amp; outdoors</h4><p>Short messages between groups where valleys, moorland and patchy mobile coverage make ordinary communication difficult.</p></article><article><span>02</span><h4>Scouting &amp; STEM</h4><p>Hands-on radio, networking and resilient-communications activities for Scouts, JOTA/JOTI and youth technology events.</p></article><article><span>03</span><h4>Radio field days</h4><p>Coordinate operators, equipment and visitors around temporary amateur-radio stations without loading the mobile network.</p></article><article><span>04</span><h4>Community events</h4><p>Supplementary messaging around shows, camps, outdoor activities and volunteer-led events.</p></article><article><span>05</span><h4>Coverage experiments</h4><p>Test antennas, paths, terrain and low-power radio propagation while contributing useful observations to the community.</p></article><article><span>06</span><h4>Family &amp; local resilience</h4><p>A pre-arranged backup for short local messages when normal services are unavailable—never a replacement for 999.</p></article></div></div><div class="glossary" id="glossary"><div><p class="eyebrow">Plain English</p><h3>MeshCore glossary.</h3></div><dl class="glossary-grid"><div><dt>Node</dt><dd>Any device participating in the MeshCore network.</dd></div><div><dt>Companion</dt><dd>Your personal messaging device, connected to an app or used standalone.</dd></div><div><dt>Repeater</dt><dd>An infrastructure node that forwards packets to extend useful paths.</dd></div><div><dt>Room Server</dt><dd>A persistent shared room that can hold messages for later collection.</dd></div><div><dt>Advert</dt><dd>An announcement that shares a node’s identity and helps contacts discover it.</dd></div><div><dt>Flood</dt><dd>A packet forwarded through multiple repeaters when a known route is unavailable or wider distribution is intended.</dd></div><div><dt>Hop</dt><dd>One radio leg between nodes. A message using two repeaters has travelled several hops.</dd></div><div><dt>Path</dt><dd>The learned sequence of nodes used to reach a particular contact.</dd></div><div><dt>Region</dt><dd>A scope used to decide which region-tagged flood traffic a repeater forwards.</dd></div><div><dt>RSSI</dt><dd>A measure of received signal strength, shown in dBm.</dd></div><div><dt>SNR</dt><dd>The wanted signal compared with background noise.</dd></div><div><dt>Airtime</dt><dd>The time packets occupy the shared radio channel; duty cycle limits how much a node may transmit.</dd></div><div><dt>EIRP</dt><dd>Effective radiated power, including transmitter power, antenna gain and cable loss.</dd></div></dl></div><div class="about-project"><div><p class="card-kicker">About the project</p><h3>Built by people across Yorkshire.</h3><p>MeshCore Yorkshire is a volunteer-led community encouraging useful, responsible off-grid messaging across the county. It is not a commercial network, formal emergency service or guarantee of coverage.</p></div><div><h4>How you can contribute</h4><ul><li>Run a companion and share constructive coverage reports.</li><li>Help a newcomer configure and test their first device.</li><li>Offer a legitimate high location for a responsibly installed repeater.</li><li>Maintain an existing repeater or help document local paths.</li><li>Share technical knowledge, use cases and corrections to the guides.</li></ul></div><div class="join-box"><p class="card-kicker">Join MeshCore Yorkshire</p><h4>Tell us where you are starting.</h4><p>Email your name, general area, device or proposed installation and what help you need. Please do not send passwords, private keys or precise private-site coordinates in an initial message.</p><a class="button button--primary" href="mailto:hello@yorkshiremesh.org?subject=Joining%20MeshCore%20Yorkshire">Email MeshCore Yorkshire <span class="arrow" aria-hidden="true">→</span></a></div></div></div></section><section class="section community" id="community"><div class="shell community-panel"><div class="signal-orbit" aria-hidden="true"><span class="radio-mark " aria-hidden="true"><i></i><b></b><em></em></span></div><div><p class="eyebrow">MeshCore Yorkshire</p><h2>Build it. Test it.<br/>Make it useful.</h2></div><div class="prose"><p>Whether you run a solar repeater on the moors, carry a pocket node around town or are simply curious, there’s a place for you here.</p><a class="text-link" href="mailto:hello@yorkshiremesh.org">Contact MeshCore Yorkshire <span class="arrow" aria-hidden="true">→</span></a></div></div></section><footer><div class="shell footer-inner"><a class="brand" href="#home"><span class="radio-mark radio-mark--small" aria-hidden="true"><i></i><b></b><em></em></span><span>MeshCore Yorkshire</span></a><p>Community-built off-grid messaging across Yorkshire.</p><p>© 2026 MeshCore Yorkshire</p></div></footer></main><script id="_R_">import("/assets/index-DEITpHOQ.js")</script></body></html><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("2:I[\"8c0f216c4604\",[],\"Children\",1]\n3:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\n4:I[\"8c0f216c4604\",[],\"Slot\",1]\n5:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n:HL[\"/assets/index-CukJ1quw.css\",\"style\"]\n0:{\"__route\":\"route:/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"page:/\":\"$L1\",\"layout:/\":[[[[\"$\",\"link\",\"css:/assets/index-CukJ1quw.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"/assets/index-CukJ1quw.css\",\"data-rsc-css-href\":\"/assets/index-CukJ1quw.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_geist_0tvmz3h __variable_geist_mono_1diim1n antialiased\",\"children\":[\"$\",\"$L2\",null,{}]}]}]],null],\"route:/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"MeshCore Yorkshire | Off-grid messaging across Yorkshire\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Yorkshire's community-built MeshCore network for resilient, off-grid LoRa messaging.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"shortcut icon\",\"href\":\"/favicon.svg\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.svg\"}],[\"$\",\"meta\",\"4\",{\"name\":\"codex-preview\",\"content\":\"development\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]],[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"page:/\"}]}]}]}]}]],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:4uhn5s1wvoptc\",\"deploymentVersion\":\"7ff7f8dc-ba07-4cfb-9aa7-60b016d57e76\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null}}\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("6:I[\"6548f76dea52\",[],\"default\",1]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("1:[\"$\",\"main\",null,{\"children\":[[\"$\",\"section\",null,{\"className\":\"hero\",\"id\":\"home\",\"children\":[[\"$\",\"header\",null,{\"className\":\"site-header\",\"children\":[\"$\",\"div\",null,{\"className\":\"site-header-inner shell\",\"children\":[[\"$\",\"a\",null,{\"className\":\"brand\",\"href\":\"#home\",\"aria-label\":\"MeshCore Yorkshire home\",\"children\":[[\"$\",\"span\",null,{\"className\":\"radio-mark \",\"aria-hidden\":\"true\",\"children\":[[\"$\",\"i\",null,{}],[\"$\",\"b\",null,{}],[\"$\",\"em\",null,{}]]}],[\"$\",\"span\",null,{\"children\":\"MeshCore Yorkshire\"}]]}],[\"$\",\"$L6\",null,{}]]}]}],[\"$\",\"div\",null,{\"className\":\"hero-content shell\",\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":[\"MeshCore \",[\"$\",\"span\",null,{\"children\":\"•\"}],\" Yorkshire\"]}],[\"$\",\"h1\",null,{\"children\":[\"Connecting Yorkshire,\",[\"$\",\"br\",null,{}],\"one node at a time.\"]}],[\"$\",\"p\",null,{\"className\":\"hero-copy\",\"children\":\"A community-built MeshCore network for resilient, off-grid messaging across Yorkshire.\"}],[\"$\",\"div\",null,{\"className\":\"hero-actions\",\"children\":[[\"$\",\"a\",null,{\"className\":\"button button--primary\",\"href\":\"#start\",\"children\":[\"Get started \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"className\":\"button button--secondary\",\"href\":\"#network\",\"children\":[\"Explore the network \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"feature-rail\",\"aria-label\":\"Network highlights\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"span\",null,{\"className\":\"feature-icon people\",\"aria-hidden\":\"true\",\"children\":\"●●●\"}],[\"$\",\"strong\",null,{\"children\":\"Community-led\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"span\",null,{\"className\":\"feature-icon mast\",\"aria-hidden\":\"true\",\"children\":\"⌁\"}],[\"$\",\"strong\",null,{\"children\":\"Off-grid ready\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"span\",null,{\"className\":\"feature-icon county\",\"aria-hidden\":\"true\",\"children\":\"◇\"}],[\"$\",\"strong\",null,{\"children\":\"Yorkshire-wide\"}]]}]]}]]}],[\"$\",\"a\",null,{\"className\":\"scroll-cue\",\"href\":\"#network\",\"aria-label\":\"Scroll to learn more\",\"children\":[\"Discover \",[\"$\",\"span\",null,{\"children\":\"↓\"}]]}]]}],[\"$\",\"section\",null,{\"className\":\"section intro\",\"id\":\"network\",\"children\":[[\"$\",\"div\",null,{\"className\":\"shell section-grid\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Built by the community\"}],[\"$\",\"h2\",null,{\"children\":\"Messages that keep moving when the internet doesn’t.\"}]]}],[\"$\",\"div\",null,{\"className\":\"prose\",\"children\":[[\"$\",\"p\",null,{\"children\":\"MeshCore uses low-power LoRa radios to pass short text messages from node to node. No mobile signal, subscription or central service is needed.\"}],[\"$\",\"p\",null,{\"children\":\"MeshCore Yorkshire brings local operators together to extend useful coverage, share knowledge and help more people get connected.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"shell cards\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"01\"}],[\"$\",\"h3\",null,{\"children\":\"Long-range LoRa\"}],[\"$\",\"p\",null,{\"children\":\"Low-power radio links designed for practical messaging over challenging terrain.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"02\"}],[\"$\",\"h3\",null,{\"children\":\"Store and forward\"}],[\"$\",\"p\",null,{\"children\":\"Repeaters help messages travel beyond the direct range of a single device.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"03\"}],[\"$\",\"h3\",null,{\"children\":\"No licence required\"}],[\"$\",\"p\",null,{\"children\":\"Built around licence-exempt devices operating within UK radio regulations.\"}]]}]]}]]}],[\"$\",\"section\",null,{\"className\":\"section how\",\"id\":\"start\",\"children\":[\"$\",\"div\",null,{\"className\":\"shell\",\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Getting started\"}],[\"$\",\"h2\",null,{\"children\":\"Everything you need to join MeshCore Yorkshire.\"}],[\"$\",\"p\",null,{\"className\":\"section-lead\",\"children\":\"You do not need an amateur radio licence or a complicated station. A compatible LoRa device, the MeshCore firmware and the same radio settings as the local network are enough to get started.\"}],[\"$\",\"div\",null,{\"className\":\"steps\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"1\"}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\",null,{\"children\":\"Choose your hardware\"}],[\"$\",\"p\",null,{\"children\":\"For everyday messaging, choose a companion device that connects to your phone by Bluetooth. A screen-and-keyboard device can operate by itself. Fixed repeaters are for extending coverage rather than sending messages.\"}]]}]]}],\"$L7\",\"$L8\"]}],\"$L9\",\"$La\",\"$Lb\",\"$Lc\"]}]}],\"$Ld\",\"$Le\",\"$Lf\",\"$L10\"]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("7:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"2\"}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\",null,{\"children\":\"Install MeshCore\"}],[\"$\",\"p\",null,{\"children\":\"Flash the correct MeshCore firmware for your board, then install the MeshCore companion app on your phone. Give your node a recognisable name and set its role to Companion.\"}]]}]]}]\n8:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"3\"}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\",null,{\"children\":\"Apply the Yorkshire settings\"}],[\"$\",\"p\",null,{\"children\":\"Use the UK frequency and matching LoRa parameters below. Every value must match; a node on a different frequency, bandwidth, spreading factor or coding rate will not hear the network.\"}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("9:[\"$\",\"div\",null,{\"className\":\"setup-grid\",\"children\":[[\"$\",\"article\",null,{\"className\":\"setup-card settings-card\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Yorkshire radio profile\"}],[\"$\",\"h3\",null,{\"children\":\"UK frequency settings\"}],[\"$\",\"dl\",null,{\"className\":\"radio-settings\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Preset\"}],[\"$\",\"dd\",null,{\"children\":\"UK (Narrow)\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Frequency\"}],[\"$\",\"dd\",null,{\"children\":\"869.618 MHz\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Bandwidth\"}],[\"$\",\"dd\",null,{\"children\":\"62.5 kHz\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Spreading factor\"}],[\"$\",\"dd\",null,{\"children\":\"SF8\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Coding rate\"}],[\"$\",\"dd\",null,{\"children\":\"8\"}]]}]]}],[\"$\",\"p\",null,{\"className\":\"small-print\",\"children\":\"This is the shared profile used by MeshCore Yorkshire. Stay within the UK licence-exempt power and duty-cycle limits for your equipment and installation.\"}]]}],[\"$\",\"article\",null,{\"className\":\"setup-card channel-card\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Meet the local network\"}],[\"$\",\"h3\",null,{\"children\":[\"Join \",[\"$\",\"span\",null,{\"children\":\"#Yorkshire\"}]]}],[\"$\",\"p\",null,{\"children\":[[\"$\",\"strong\",null,{\"children\":\"#Yorkshire\"}],\" is the public community channel for local chat, coverage reports, testing and getting help from other node operators.\"]}],[\"$\",\"ol\",null,{\"children\":[[\"$\",\"li\",null,{\"children\":\"Open Channels in the companion app.\"}],[\"$\",\"li\",null,{\"children\":[\"Add or discover the channel named \",[\"$\",\"strong\",null,{\"children\":\"#Yorkshire\"}],\".\"]}],[\"$\",\"li\",null,{\"children\":\"Send a short introduction with your name and area.\"}]]}],[\"$\",\"p\",null,{\"className\":\"small-print\",\"children\":\"Direct messages are private between contacts; public channel messages may be seen and repeated by other nodes across the mesh.\"}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("a:[\"$\",\"div\",null,{\"className\":\"setup-links\",\"id\":\"setup-tools\",\"aria-label\":\"MeshCore setup links\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Start here\"}],[\"$\",\"h3\",null,{\"children\":\"From unopened box to first message.\"}]]}],[\"$\",\"div\",null,{\"className\":\"setup-link-grid\",\"children\":[[\"$\",\"a\",null,{\"href\":\"https://flasher.meshcore.io/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"1\"}],[\"$\",\"strong\",null,{\"children\":\"Flash your device\"}],[\"$\",\"small\",null,{\"children\":\"Install the correct Companion, Repeater or Room Server firmware.\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://apps.apple.com/gb/app/meshcore/id6742354151\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"2\"}],[\"$\",\"strong\",null,{\"children\":\"Get the iPhone app\"}],[\"$\",\"small\",null,{\"children\":\"Install MeshCore from the UK Apple App Store.\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://play.google.com/store/apps/details?id=com.liamcottle.meshcore.android\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"2\"}],[\"$\",\"strong\",null,{\"children\":\"Get the Android app\"}],[\"$\",\"small\",null,{\"children\":\"Install the companion application from Google Play.\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://app.meshcore.nz/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"3\"}],[\"$\",\"strong\",null,{\"children\":\"Open the web client\"}],[\"$\",\"small\",null,{\"children\":\"Use a compatible device through a supported browser.\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("b:[\"$\",\"div\",null,{\"className\":\"hardware-guide\",\"id\":\"hardware\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hardware-heading\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Choosing a device\"}],[\"$\",\"h3\",null,{\"children\":\"Which hardware do I need?\"}],[\"$\",\"p\",null,{\"children\":\"Start with one companion node. Add a repeater only when you understand your local coverage and have a genuinely useful location for it.\"}]]}],[\"$\",\"div\",null,{\"className\":\"hardware-options\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Best first device\"}],[\"$\",\"h4\",null,{\"children\":\"Phone companion\"}],[\"$\",\"p\",null,{\"children\":\"A small LoRa board links to the MeshCore app over Bluetooth. It is the simplest and most flexible way to send messages, manage contacts and use channels.\"}],[\"$\",\"small\",null,{\"children\":\"Examples include supported Heltec, LilyGo and Seeed Studio boards.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Standalone\"}],[\"$\",\"h4\",null,{\"children\":\"Screen \u0026 keyboard\"}],[\"$\",\"p\",null,{\"children\":\"Devices such as a T-Deck let you read and type messages without using a phone. They are portable and convenient, but usually cost more.\"}],[\"$\",\"small\",null,{\"children\":\"Choose the correct 868 MHz version for UK use.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Extend coverage\"}],[\"$\",\"h4\",null,{\"children\":\"Repeater\"}],[\"$\",\"p\",null,{\"children\":\"A fixed, powered node relays packets for others. Height, a clear view and a quiet radio location matter more than maximum transmit power or a huge antenna.\"}],[\"$\",\"small\",null,{\"children\":\"Outdoor repeaters need weatherproofing, reliable power and a responsible installation.\"}]]}]]}]]}]\nc:[\"$\",\"div\",null,{\"className\":\"start-cta\",\"children\":[[\"$\",\"a\",null,{\"className\":\"button button--primary\",\"href\":\"#community\",\"children\":[\"Join the Yorkshire community \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"p\",null,{\"children\":\"Once configured, leave your node running for a few minutes so it can hear advertisements and discover nearby contacts.\"}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("d:[\"$\",\"section\",null,{\"className\":\"section learn\",\"id\":\"learn\",\"children\":[\"$\",\"div\",null,{\"className\":\"shell\",\"children\":[[\"$\",\"div\",null,{\"className\":\"section-grid learn-intro\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"How the mesh works\"}],[\"$\",\"h2\",null,{\"children\":\"More than radios shouting into the air.\"}]]}],[\"$\",\"div\",null,{\"className\":\"prose\",\"children\":[[\"$\",\"p\",null,{\"children\":\"Your companion learns which repeaters can reach a contact and sends a short encrypted packet along a suitable path. Repeaters forward it; Room Servers provide a shared place where messages can be stored and collected later.\"}],[\"$\",\"p\",null,{\"children\":\"Coverage is never guaranteed. Terrain, buildings, antenna position, interference and the nodes currently online all affect whether a path is available.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"role-grid\",\"id\":\"node-roles\",\"aria-label\":\"MeshCore node roles\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Carry\"}],[\"$\",\"h3\",null,{\"children\":\"Companion\"}],[\"$\",\"p\",null,{\"children\":\"Your personal identity on the mesh. It connects to the app or provides its own screen and keyboard, manages contacts and sends direct or channel messages.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Relay\"}],[\"$\",\"h3\",null,{\"children\":\"Repeater\"}],[\"$\",\"p\",null,{\"children\":\"Unattended infrastructure that forwards packets. It does not replace your companion and is most valuable in a high, clear and reliable location.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Store\"}],[\"$\",\"h3\",null,{\"children\":\"Room Server\"}],[\"$\",\"p\",null,{\"children\":\"A persistent meeting place that can hold room messages for users to retrieve. It serves a different purpose from a pure coverage repeater.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"field-guide\",\"id\":\"first-test\",\"children\":[[\"$\",\"div\",null,{\"className\":\"field-copy\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"A useful first test\"}],[\"$\",\"h3\",null,{\"children\":\"Prove the basics before chasing distance.\"}],[\"$\",\"ol\",null,{\"className\":\"checklist\",\"children\":[[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Start nearby.\"}],[\"$\",\"span\",null,{\"children\":\"Place two companion devices a few metres apart and confirm both use the Yorkshire radio profile.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Wait for discovery.\"}],[\"$\",\"span\",null,{\"children\":\"Leave both powered for several minutes so advertisements and contacts have time to appear.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Send direct first.\"}],[\"$\",\"span\",null,{\"children\":[\"Exchange a short direct message, then try \",[\"$\",\"strong\",null,{\"children\":\"#Yorkshire\"}],\" and note whether delivery is confirmed.\"]}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Add one variable.\"}],[\"$\",\"span\",null,{\"children\":\"Increase distance or introduce a repeater only after the simple link works reliably.\"}]]}]]}]]}],[\"$\",\"aside\",null,{\"className\":\"signal-card\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Understanding signal figures\"}],[\"$\",\"h3\",null,{\"children\":\"RSSI and SNR\"}],[\"$\",\"p\",null,{\"children\":[[\"$\",\"strong\",null,{\"children\":\"RSSI\"}],\" is received signal strength. A value closer to zero is stronger, but strong RSSI alone does not guarantee clean reception.\"]}],[\"$\",\"p\",null,{\"children\":[[\"$\",\"strong\",null,{\"children\":\"SNR\"}],\" compares the wanted LoRa signal with noise. Positive is clean; LoRa can still decode some signals below zero.\"]}],[\"$\",\"p\",null,{\"className\":\"small-print\",\"children\":\"Treat both as clues, not pass/fail scores. Packet delivery is the result that matters.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"placement\",\"id\":\"placement\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Building useful coverage\"}],[\"$\",\"h3\",null,{\"children\":\"Height first. Power second.\"}],[\"$\",\"p\",null,{\"children\":\"A modest repeater with a clear view will often outperform a powerful node hidden behind walls or surrounded by electrical noise. Plan for reliability, not an impressive bench-test figure.\"}]]}],\"$L11\"]}],\"$L12\",\"$L13\",\"$L14\",\"$L15\"]}]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("e:[\"$\",\"section\",null,{\"className\":\"section essentials\",\"id\":\"essentials\",\"children\":[\"$\",\"div\",null,{\"className\":\"shell\",\"children\":[[\"$\",\"div\",null,{\"className\":\"section-grid essentials-intro\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Using it well\"}],[\"$\",\"h2\",null,{\"children\":\"The details that turn a radio into a useful network.\"}]]}],[\"$\",\"div\",null,{\"className\":\"prose\",\"children\":[\"$\",\"p\",null,{\"children\":\"Getting firmware onto a device is only the beginning. Good discovery habits, sensible repeater maintenance and clear expectations make MeshCore Yorkshire more reliable for everyone.\"}]}]]}],[\"$\",\"div\",null,{\"className\":\"advert-guide\",\"id\":\"adverts\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Finding other people\"}],[\"$\",\"h3\",null,{\"children\":\"Adverts introduce your node.\"}],[\"$\",\"p\",null,{\"children\":\"An advert announces your node identity so other companions can add you as a contact and learn how to reach you. Both ends may need to advertise before reliable direct messaging is possible.\"}]]}],[\"$\",\"div\",null,{\"className\":\"advert-options\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Nearby introduction\"}],[\"$\",\"h4\",null,{\"children\":\"Zero-hop advert\"}],[\"$\",\"p\",null,{\"children\":\"Heard only by nodes within direct radio range. Use this for local testing and introductions without asking repeaters to forward it.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Wider introduction\"}],[\"$\",\"h4\",null,{\"children\":\"Flood advert\"}],[\"$\",\"p\",null,{\"children\":\"Forwarded by repeaters within the configured limits. Use occasionally when you genuinely need to announce across the wider mesh.\"}]]}]]}],[\"$\",\"p\",null,{\"className\":\"good-practice\",\"children\":[[\"$\",\"strong\",null,{\"children\":\"Good practice:\"}],\" advertise once, wait for the mesh to respond and avoid repeatedly flooding adverts. More adverts do not create better coverage; they consume shared airtime.\"]}]]}],[\"$\",\"div\",null,{\"className\":\"maintenance-grid\",\"id\":\"maintenance\",\"children\":[[\"$\",\"div\",null,{\"className\":\"maintenance-copy\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"For repeater operators\"}],[\"$\",\"h3\",null,{\"children\":\"Maintain it like shared infrastructure.\"}],[\"$\",\"p\",null,{\"children\":\"A remote repeater should be documented and recoverable. Make changes deliberately, keep known-good settings and plan physical maintenance before a fault occurs.\"}]]}],[\"$\",\"ul\",null,{\"className\":\"maintenance-list\",\"children\":[[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Record the build\"}],[\"$\",\"span\",null,{\"children\":\"Board model, radio profile, regions, firmware version, antenna, power system and installation date.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Protect access\"}],[\"$\",\"span\",null,{\"children\":\"Change default admin credentials, retain them securely and back up the node’s private key where supported.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Update carefully\"}],[\"$\",\"span\",null,{\"children\":\"Review stable firmware periodically, save the current configuration and avoid risky remote updates when recovery is difficult.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Inspect the site\"}],[\"$\",\"span\",null,{\"children\":\"Check enclosure seals, condensation, connectors, cable strain, antenna condition and battery or solar performance.\"}]]}],[\"$\",\"li\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Retest afterwards\"}],[\"$\",\"span\",null,{\"children\":\"Verify the Yorkshire radio profile, regions, adverts and actual two-way packet delivery after any reset or reflash.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"privacy-panel\",\"id\":\"privacy\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Privacy \u0026 security\"}],[\"$\",\"h3\",null,{\"children\":\"Know what other nodes can see.\"}]]}],[\"$\",\"div\",null,{\"className\":\"privacy-grid\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Public means public\"}],[\"$\",\"p\",null,{\"children\":[\"Messages posted to \",[\"$\",\"strong\",null,{\"children\":\"#Yorkshire\"}],\" may be received and repeated across the community network. Never post confidential or sensitive personal information.\"]}]]}],\"$L16\",\"$L17\",\"$L18\",\"$L19\",\"$L1a\"]}]]}],\"$L1b\",\"$L1c\",\"$L1d\"]}]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("f:[\"$\",\"section\",null,{\"className\":\"section community\",\"id\":\"community\",\"children\":[\"$\",\"div\",null,{\"className\":\"shell community-panel\",\"children\":[[\"$\",\"div\",null,{\"className\":\"signal-orbit\",\"aria-hidden\":\"true\",\"children\":[\"$\",\"span\",null,{\"className\":\"radio-mark \",\"aria-hidden\":\"true\",\"children\":[[\"$\",\"i\",null,{}],[\"$\",\"b\",null,{}],[\"$\",\"em\",null,{}]]}]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"MeshCore Yorkshire\"}],[\"$\",\"h2\",null,{\"children\":[\"Build it. Test it.\",[\"$\",\"br\",null,{}],\"Make it useful.\"]}]]}],[\"$\",\"div\",null,{\"className\":\"prose\",\"children\":[[\"$\",\"p\",null,{\"children\":\"Whether you run a solar repeater on the moors, carry a pocket node around town or are simply curious, there’s a place for you here.\"}],[\"$\",\"a\",null,{\"className\":\"text-link\",\"href\":\"mailto:hello@yorkshiremesh.org\",\"children\":[\"Contact MeshCore Yorkshire \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}]]}]}]\n10:[\"$\",\"footer\",null,{\"children\":[\"$\",\"div\",null,{\"className\":\"shell footer-inner\",\"children\":[[\"$\",\"a\",null,{\"className\":\"brand\",\"href\":\"#home\",\"children\":[[\"$\",\"span\",null,{\"className\":\"radio-mark radio-mark--small\",\"aria-hidden\":\"true\",\"children\":[[\"$\",\"i\",null,{}],[\"$\",\"b\",null,{}],[\"$\",\"em\",null,{}]]}],[\"$\",\"span\",null,{\"children\":\"MeshCore Yorkshire\"}]]}],[\"$\",\"p\",null,{\"children\":\"Community-built off-grid messaging across Yorkshire.\"}],[\"$\",\"p\",null,{\"children\":\"© 2026 MeshCore Yorkshire\"}]]}]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("11:[\"$\",\"div\",null,{\"className\":\"placement-points\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"01\"}],[\"$\",\"h4\",null,{\"children\":\"Choose the site\"}],[\"$\",\"p\",null,{\"children\":\"Look for legal access, clear horizons, safe maintenance and a location where the node benefits more than one household.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"02\"}],[\"$\",\"h4\",null,{\"children\":\"Keep RF losses low\"}],[\"$\",\"p\",null,{\"children\":\"Use a suitable 868 MHz antenna, short low-loss feed where possible, sound connectors and separation from noisy electronics.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"03\"}],[\"$\",\"h4\",null,{\"children\":\"Make it dependable\"}],[\"$\",\"p\",null,{\"children\":\"Weatherproof outdoor equipment, provide battery margin for poor weather and keep a record of firmware, settings and admin access.\"}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("12:[\"$\",\"div\",null,{\"className\":\"regions-guide\",\"id\":\"regions\",\"children\":[[\"$\",\"div\",null,{\"className\":\"regions-heading\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Repeater configuration\"}],[\"$\",\"h3\",null,{\"children\":\"Regions keep local traffic useful.\"}],[\"$\",\"p\",null,{\"children\":[\"Regions tell a repeater which scoped flood traffic it should forward. Use \",[\"$\",\"code\",null,{\"children\":\"yorkshire\"}],\" as the primary region, with the neighbouring regional identifiers below added as extras.\"]}]]}],[\"$\",\"div\",null,{\"className\":\"region-cards\",\"aria-label\":\"Recommended repeater regions\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Primary region\"}],[\"$\",\"code\",null,{\"children\":\"yorkshire\"}],[\"$\",\"p\",null,{\"children\":\"The main Yorkshire community scope.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Extra region\"}],[\"$\",\"code\",null,{\"children\":\"eng-yh\"}],[\"$\",\"p\",null,{\"children\":\"The England–Yorkshire and the Humber regional scope.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Extra region\"}],[\"$\",\"code\",null,{\"children\":\"eng-ne\"}],[\"$\",\"p\",null,{\"children\":\"The North East England scope, useful for cross-boundary paths.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"Extra region\"}],[\"$\",\"code\",null,{\"children\":\"gb-eng-nw\"}],[\"$\",\"p\",null,{\"children\":\"The North West England scope, useful for routes across the Pennines.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"command-panel\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Suggested CLI sequence\"}],[\"$\",\"h4\",null,{\"children\":\"Add and allow the primary region and three extras\"}],[\"$\",\"p\",null,{\"children\":[\"Log in to the repeater, open its CLI and enter one command at a time. Wait for an \",[\"$\",\"code\",null,{\"children\":\"OK\"}],\" response after every command. The final command saves the region configuration permanently.\"]}],[\"$\",\"a\",null,{\"className\":\"text-link\",\"href\":\"https://github.com/MichaelMeshBrad/MCYorks/wiki/Suggested-Meshcore-Repeater-Commands\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"Read the complete Yorkshire repeater guide \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}],[\"$\",\"pre\",null,{\"aria-label\":\"MeshCore region commands\",\"children\":[\"$\",\"code\",null,{\"children\":\"region put yorkshire\\nregion allowf yorkshire\\n\\nregion put eng-yh\\nregion allowf eng-yh\\n\\nregion put eng-ne\\nregion allowf eng-ne\\n\\nregion put gb-eng-nw\\nregion allowf gb-eng-nw\\n\\nregion save\"}]}]]}],[\"$\",\"p\",null,{\"className\":\"regions-note\",\"children\":[[\"$\",\"strong\",null,{\"children\":\"Suggested, not one-size-fits-all:\"}],\" these regions have been recommended for Yorkshire repeaters, but an operator may need different settings for their location and neighbouring network. Region identifiers are case-sensitive; enter them exactly as shown.\"]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("13:[\"$\",\"div\",null,{\"className\":\"troubleshoot\",\"id\":\"troubleshooting\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Quick checks\"}],[\"$\",\"h3\",null,{\"children\":\"Can’t see nodes or deliver a message?\"}]]}],[\"$\",\"div\",null,{\"className\":\"fault-list\",\"children\":[[\"$\",\"details\",null,{\"children\":[[\"$\",\"summary\",null,{\"children\":\"Nothing appears in Contacts\"}],[\"$\",\"p\",null,{\"children\":\"Confirm the device has Companion firmware, Bluetooth is connected, the antenna is fitted, and frequency, bandwidth, SF and CR exactly match the Yorkshire profile. Then wait several minutes outdoors or near a window.\"}]]}],[\"$\",\"details\",null,{\"children\":[[\"$\",\"summary\",null,{\"children\":\"I can receive, but messages do not deliver\"}],[\"$\",\"p\",null,{\"children\":\"Reception does not prove there is a return path. Move to a clearer position, allow path discovery to update and test a nearby contact before assuming the repeater is faulty.\"}]]}],[\"$\",\"details\",null,{\"children\":[[\"$\",\"summary\",null,{\"children\":\"The web flasher cannot find my board\"}],[\"$\",\"p\",null,{\"children\":\"Use Chrome or Edge on a computer, try a known data-capable USB cable and select the exact hardware model. Many USB cables provide charging only.\"}]]}],[\"$\",\"details\",null,{\"children\":[[\"$\",\"summary\",null,{\"children\":\"My repeater performs worse than expected\"}],[\"$\",\"p\",null,{\"children\":\"Check noise level, antenna and connector losses, nearby electronics, enclosure placement and power stability. More transmit power cannot repair poor reception or a blocked site.\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("14:[\"$\",\"div\",null,{\"className\":\"uk-note\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Responsible UK operation\"}],[\"$\",\"h3\",null,{\"children\":\"Licence-exempt does not mean unrestricted.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"children\":\"Use 868 MHz hardware and operate within the power, spectrum-access and duty-cycle conditions that apply to the chosen sub-band. Antenna gain and any amplifier count towards radiated power. Install repeaters only with the landowner’s permission and never where they could create a safety or access risk.\"}],[\"$\",\"p\",null,{\"children\":\"MeshCore Yorkshire is a community communications network, not an emergency service and not a replacement for 999.\"}]]}]]}]\n15:[\"$\",\"div\",null,{\"className\":\"resources\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"UK resources\"}],[\"$\",\"h3\",null,{\"children\":\"Explore, plan and read further.\"}]]}],[\"$\",\"div\",null,{\"className\":\"resource-links\",\"children\":[[\"$\",\"a\",null,{\"href\":\"https://m3sh.uk/contacts/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"UK network view\"}],[\"$\",\"strong\",null,{\"children\":\"Explore reported nodes on M3SH\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://localmesh.co.uk/meshcore-setup/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"Beginner guide\"}],[\"$\",\"strong\",null,{\"children\":\"Read a British setup walkthrough\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://localmesh.co.uk/meshcore-repeater-setup/\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"Infrastructure\"}],[\"$\",\"strong\",null,{\"children\":\"Read the UK repeater guide\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}],[\"$\",\"a\",null,{\"href\":\"https://www.ofcom.org.uk/siteassets/resources/documents/spectrum/interface-requirements/ir-2030.pdf\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[[\"$\",\"span\",null,{\"children\":\"Official requirements\"}],[\"$\",\"strong\",null,{\"children\":\"Read Ofcom IR 2030\"}],[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("16:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Choose a sensible identity\"}],[\"$\",\"p\",null,{\"children\":\"Node names and adverts are visible to others. Avoid including a home address, telephone number or other unnecessary personal details.\"}]]}]\n17:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Share location deliberately\"}],[\"$\",\"p\",null,{\"children\":\"Only publish precise coordinates when appropriate. Infrastructure locations may reveal private homes or restricted sites.\"}]]}]\n18:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Protect your node identity\"}],[\"$\",\"p\",null,{\"children\":\"A private key identifies the node. Keep backups securely where supported; a full erase may generate a new identity and break existing contacts.\"}]]}]\n19:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Private is not infallible\"}],[\"$\",\"p\",null,{\"children\":\"Direct messaging provides privacy features, but MeshCore is a community radio system—not a guaranteed secure or emergency communications service.\"}]]}]\n1a:[\"$\",\"article\",null,{\"children\":[[\"$\",\"b\",null,{\"children\":\"Report problems responsibly\"}],[\"$\",\"p\",null,{\"children\":\"If you discover abuse, unsafe infrastructure or a security concern, contact the project without publishing sensitive details in a public channel.\"}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("1b:[\"$\",\"div\",null,{\"className\":\"use-cases\",\"id\":\"uses\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Made for Yorkshire\"}],[\"$\",\"h3\",null,{\"children\":\"What could you use it for?\"}]]}],[\"$\",\"div\",null,{\"className\":\"use-grid\",\"children\":[[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"01\"}],[\"$\",\"h4\",null,{\"children\":\"Walking \u0026 outdoors\"}],[\"$\",\"p\",null,{\"children\":\"Short messages between groups where valleys, moorland and patchy mobile coverage make ordinary communication difficult.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"02\"}],[\"$\",\"h4\",null,{\"children\":\"Scouting \u0026 STEM\"}],[\"$\",\"p\",null,{\"children\":\"Hands-on radio, networking and resilient-communications activities for Scouts, JOTA/JOTI and youth technology events.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"03\"}],[\"$\",\"h4\",null,{\"children\":\"Radio field days\"}],[\"$\",\"p\",null,{\"children\":\"Coordinate operators, equipment and visitors around temporary amateur-radio stations without loading the mobile network.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"04\"}],[\"$\",\"h4\",null,{\"children\":\"Community events\"}],[\"$\",\"p\",null,{\"children\":\"Supplementary messaging around shows, camps, outdoor activities and volunteer-led events.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"05\"}],[\"$\",\"h4\",null,{\"children\":\"Coverage experiments\"}],[\"$\",\"p\",null,{\"children\":\"Test antennas, paths, terrain and low-power radio propagation while contributing useful observations to the community.\"}]]}],[\"$\",\"article\",null,{\"children\":[[\"$\",\"span\",null,{\"children\":\"06\"}],[\"$\",\"h4\",null,{\"children\":\"Family \u0026 local resilience\"}],[\"$\",\"p\",null,{\"children\":\"A pre-arranged backup for short local messages when normal services are unavailable—never a replacement for 999.\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("1c:[\"$\",\"div\",null,{\"className\":\"glossary\",\"id\":\"glossary\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"eyebrow\",\"children\":\"Plain English\"}],[\"$\",\"h3\",null,{\"children\":\"MeshCore glossary.\"}]]}],[\"$\",\"dl\",null,{\"className\":\"glossary-grid\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Node\"}],[\"$\",\"dd\",null,{\"children\":\"Any device participating in the MeshCore network.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Companion\"}],[\"$\",\"dd\",null,{\"children\":\"Your personal messaging device, connected to an app or used standalone.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Repeater\"}],[\"$\",\"dd\",null,{\"children\":\"An infrastructure node that forwards packets to extend useful paths.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Room Server\"}],[\"$\",\"dd\",null,{\"children\":\"A persistent shared room that can hold messages for later collection.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Advert\"}],[\"$\",\"dd\",null,{\"children\":\"An announcement that shares a node’s identity and helps contacts discover it.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Flood\"}],[\"$\",\"dd\",null,{\"children\":\"A packet forwarded through multiple repeaters when a known route is unavailable or wider distribution is intended.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Hop\"}],[\"$\",\"dd\",null,{\"children\":\"One radio leg between nodes. A message using two repeaters has travelled several hops.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Path\"}],[\"$\",\"dd\",null,{\"children\":\"The learned sequence of nodes used to reach a particular contact.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Region\"}],[\"$\",\"dd\",null,{\"children\":\"A scope used to decide which region-tagged flood traffic a repeater forwards.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"RSSI\"}],[\"$\",\"dd\",null,{\"children\":\"A measure of received signal strength, shown in dBm.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"SNR\"}],[\"$\",\"dd\",null,{\"children\":\"The wanted signal compared with background noise.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"Airtime\"}],[\"$\",\"dd\",null,{\"children\":\"The time packets occupy the shared radio channel; duty cycle limits how much a node may transmit.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"dt\",null,{\"children\":\"EIRP\"}],[\"$\",\"dd\",null,{\"children\":\"Effective radiated power, including transmitter power, antenna gain and cable loss.\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("1d:[\"$\",\"div\",null,{\"className\":\"about-project\",\"children\":[[\"$\",\"div\",null,{\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"About the project\"}],[\"$\",\"h3\",null,{\"children\":\"Built by people across Yorkshire.\"}],[\"$\",\"p\",null,{\"children\":\"MeshCore Yorkshire is a volunteer-led community encouraging useful, responsible off-grid messaging across the county. It is not a commercial network, formal emergency service or guarantee of coverage.\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h4\",null,{\"children\":\"How you can contribute\"}],[\"$\",\"ul\",null,{\"children\":[[\"$\",\"li\",null,{\"children\":\"Run a companion and share constructive coverage reports.\"}],[\"$\",\"li\",null,{\"children\":\"Help a newcomer configure and test their first device.\"}],[\"$\",\"li\",null,{\"children\":\"Offer a legitimate high location for a responsibly installed repeater.\"}],[\"$\",\"li\",null,{\"children\":\"Maintain an existing repeater or help document local paths.\"}],[\"$\",\"li\",null,{\"children\":\"Share technical knowledge, use cases and corrections to the guides.\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"join-box\",\"children\":[[\"$\",\"p\",null,{\"className\":\"card-kicker\",\"children\":\"Join MeshCore Yorkshire\"}],[\"$\",\"h4\",null,{\"children\":\"Tell us where you are starting.\"}],[\"$\",\"p\",null,{\"children\":\"Email your name, general area, device or proposed installation and what help you need. Please do not send passwords, private keys or precise private-site coordinates in an initial message.\"}],[\"$\",\"a\",null,{\"className\":\"button button--primary\",\"href\":\"mailto:hello@yorkshiremesh.org?subject=Joining%20MeshCore%20Yorkshire\",\"children\":[\"Email MeshCore Yorkshire \",[\"$\",\"span\",null,{\"className\":\"arrow\",\"aria-hidden\":\"true\",\"children\":\"→\"}]]}]]}]]}]\n")</script><script>self.__VINEXT_RSC_DONE__=true</script>
