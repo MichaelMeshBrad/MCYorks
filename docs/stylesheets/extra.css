@@ -1,0 +1,16 @@
+:root {
+  --md-primary-fg-color: #177245;
+  --md-accent-fg-color: #f28c28;
+}
+.md-header {
+  background: linear-gradient(90deg, #123b2c, #177245);
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+}
+
+.md-typeset code {
+  border-radius: 0.25rem;
+}

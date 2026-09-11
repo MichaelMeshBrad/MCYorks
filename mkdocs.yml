@@ -1,0 +1,53 @@
+site_name: MeshCore Yorkshire Documentation
+site_description: Practical MeshCore guidance for repeaters and companions across Yorkshire.
+site_url: https://docs.meshcoreyorkshire.uk/
+repo_url: https://github.com/MichaelMeshBrad/MCYorks
+repo_name: MichaelMeshBrad/MCYorks
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/favicon.svg
+  favicon: assets/favicon.svg
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Repeaters:
+      - Suggested repeater commands: repeaters/suggested-repeater-commands.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Community guidance from MeshCore Yorkshire

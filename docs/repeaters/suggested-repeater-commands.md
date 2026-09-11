@@ -1,0 +1,83 @@
+# Suggested MeshCore repeater commands
+
+These suggested settings have been deployed successfully across Yorkshire. Individual repeaters may need different settings based on their location, coverage and surrounding mesh traffic.
+
+## Access the CLI
+
+1. Log in to the repeater.
+2. Navigate to the **CLI** section.
+3. Enter each command on a separate line.
+4. Wait for an `OK` response before entering the next command.
+5. Save the configuration when complete.
+
+## Suggested commands
+
+| Command | Description |
+| --- | --- |
+| `set flood.max 15` | Sets the maximum flood distance for messages and advertisements to 15 hops. |
+| `set flood.max.advert 3` | Sets advertisement flood messages to a maximum of 3 hops (firmware v1.16+). |
+| `set flood.max.unscoped 8` | Sets unscoped flood messages to a maximum of 8 hops (firmware v1.16+). |
+| `set path.hash.mode 2` | Uses a 3-byte hash for repeater advertisement paths. This does not change the size of forwarded messages. |
+| `set loop.detect minimal` | Enables minimal loop detection to drop packets when the repeater's ID or hash occurs too many times. |
+| `set flood.advert.interval 162` | Sends a flood advertisement every 162 hours to reduce mesh congestion. |
+| `set advert.interval 240` | Sets the zero-hop advertisement interval to 240 minutes (4 hours). |
+| `set dutycycle 10` | Sets the radio duty cycle to 10% (firmware v1.15+). |
+
+!!! warning "Enter commands individually"
+    Wait for an `OK` response after each command so you know it has been accepted.
+
+## Expected result
+
+With these settings, the repeater will:
+
+- Forward flood messages up to 15 hops.
+- Forward advertisement floods up to 3 hops.
+- Forward unscoped messages and floods up to 8 hops.
+- Use a 3-byte path hash for repeater advertisements.
+- Apply minimal loop detection.
+- Reduce unnecessary advertisement traffic.
+
+## Yorkshire region configuration
+
+The following configuration is actively used on the Yorkshire region and the `#Yorkshire` channel.
+
+Enter these commands in order:
+
+```text
+region put yorkshire
+region put eng-yh
+region default yorkshire
+region save
+```
+
+### Optional neighbouring regions
+
+Add these only when the repeater needs useful North East or North West inter-region coverage:
+
+```text
+region put eng-ne
+region put northwest
+region save
+```
+
+| Command | Description |
+| --- | --- |
+| `region put yorkshire` | Adds and allows forwarding for the Yorkshire region identifier. |
+| `region put eng-yh` | Adds the Yorkshire and Humber region code. |
+| `region put eng-ne` | Adds the North East England region code. |
+| `region put northwest` | Adds the North West England region code. |
+| `region default yorkshire` | Makes Yorkshire the default region for repeater access and flood messages. |
+| `region save` | Saves the region configuration permanently. |
+
+## Client configuration
+
+Once the regional settings are deployed, add the `yorkshire` region scope to the `#Yorkshire` channel in the MeshCore client. This helps reduce unnecessary mesh traffic.
+
+1. Open the `#Yorkshire` channel.
+2. Select the three-dot menu in the top-right corner.
+3. Choose **Set Region Scope**.
+4. Select **+** and add `yorkshire`.
+5. Select the tick to save it and make sure the scope is selected.
+
+!!! important
+    These are suggested commands, not universal settings. Review the results and adapt them to the needs of each repeater.
