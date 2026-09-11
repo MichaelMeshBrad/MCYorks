@@ -15,7 +15,7 @@ These suggested settings have been deployed successfully across Yorkshire. Indiv
 | Command | Description |
 | --- | --- |
 | `set flood.max 15` | Sets the maximum flood distance for messages and advertisements to 15 hops. |
-| `set flood.max.advert 3` | Sets advertisement flood messages to a maximum of 3 hops (firmware v1.16+). |
+| `set flood.max.advert 0` | Sets advertisement flood messages to a maximum of 0 hops to help mesh congestion (firmware v1.16+). |
 | `set flood.max.unscoped 8` | Sets unscoped flood messages to a maximum of 8 hops (firmware v1.16+). |
 | `set path.hash.mode 2` | Uses a 3-byte hash for repeater advertisement paths. This does not change the size of forwarded messages. |
 | `set loop.detect minimal` | Enables minimal loop detection to drop packets when the repeater's ID or hash occurs too many times. |
