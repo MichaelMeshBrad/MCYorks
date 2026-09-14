@@ -14,13 +14,13 @@ These suggested settings have been deployed successfully across Yorkshire. Indiv
 
 | Command | Description |
 | --- | --- |
-| `set flood.max 15` | Sets the maximum flood distance for messages and advertisements to 15 hops. |
+| `set flood.max 20` | Sets the maximum flood distance for messages and advertisements to 20 hops. |
 | `set flood.max.advert 0` | Sets advertisement flood messages to a maximum of 0 hops to help mesh congestion (firmware v1.16+). |
-| `set flood.max.unscoped 8` | Sets unscoped flood messages to a maximum of 8 hops (firmware v1.16+). |
+| `set flood.max.unscoped 32` | Sets unscoped flood messages to a maximum of 32 hops (firmware v1.16+). |
 | `set path.hash.mode 2` | Uses a 3-byte hash for repeater advertisement paths. This does not change the size of forwarded messages. |
 | `set loop.detect minimal` | Enables minimal loop detection to drop packets when the repeater's ID or hash occurs too many times. |
-| `set flood.advert.interval 162` | Sends a flood advertisement every 162 hours to reduce mesh congestion. |
-| `set advert.interval 240` | Sets the zero-hop advertisement interval to 240 minutes (4 hours). |
+| `set flood.advert.interval 0` | Sends a flood advertisement every 0 hours to reduce mesh congestion. manual Advert will still be availble |
+| `set advert.interval 60` | Sets the zero-hop advertisement interval to 60 minutes (1 hours). |
 | `set dutycycle 10` | Sets the radio duty cycle to 10% (firmware v1.15+). |
 
 !!! warning "Enter commands individually"
