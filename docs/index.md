@@ -7,7 +7,7 @@ Practical setup guidance for building and operating reliable MeshCore networks a
 Use the [suggested repeater commands](repeaters/suggested-repeater-commands.md) as a starting point for configuring flood limits, advertisements, loop detection, duty cycle and regional routing.
 
 !!! note
-    These are community recommendations. Adjust individual repeaters to suit their location, coverage and traffic conditions.
+    These are community suggestions. Adjust individual repeaters to suit their location, coverage and traffic conditions.
 
 ## Contributing
 
