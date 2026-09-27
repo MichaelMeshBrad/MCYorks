@@ -73,7 +73,7 @@ region save
 
 Once the regional settings are deployed, add the `yorkshire` region scope to the `#Yorkshire` channel in the MeshCore client. This helps reduce unnecessary mesh traffic.
 
-1. Open the `#Yorkshire` channel.
+1. Open the `#yorkshire` channel.
 2. Select the three-dot menu in the top-right corner.
 3. Choose **Set Region Scope**.
 4. Select **+** and add `yorkshire`.
