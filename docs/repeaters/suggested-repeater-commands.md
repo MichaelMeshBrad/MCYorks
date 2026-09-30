@@ -48,9 +48,9 @@ The following commands may help messages get out based on the number of neighbou
 
 | Command | Description |
 | --- | --- |
-| `set tx delay 0.5` | Sets a 0.5 second delay, best for 1-10 neighbours |
-| `set tx delay 1.0` | Sets a 1.0 second delay, best for 11-20 neighbours |
-| `set tx delay 1.8` | Sets a 1.8 second delay, best for 20+ neighbours |
+| `set tx delay 0.5` | Sets a 0.5 second delay, best for repeaters with 1-10 neighbours |
+| `set tx delay 1.0` | Sets a 1.0 second delay, best for repeaters with 11-20 neighbours |
+| `set tx delay 1.8` | Sets a 1.8 second delay, best for repeaters with 20+ neighbours |
 
 If your repeater has 20+ neighbours, the TX Delay COULD be increased up to a max of 2.0
 
