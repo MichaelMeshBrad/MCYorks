@@ -23,8 +23,8 @@ These suggested settings have been deployed successfully across Yorkshire. Indiv
 | `set advert.interval 237` | Sets the zero-hop advertisement interval to 237 minutes (approx. 4 hours). |
 | `set dutycycle 10` | Sets the radio duty cycle to 10% (firmware v1.15+). |
 
-Flood.Max - Controls Flood messages which ARE scoped with a region tag
-Flood.Max.UnScoped - Controls Flood messages are NOT scoped with a region tag
+- Flood.Max - Controls Flood messages which ARE scoped with a region tag
+- Flood.Max.UnScoped - Controls Flood messages are NOT scoped with a region tag
 
 !!! warning "Enter commands individually"
     Wait for an `OK` response after each command so you know it has been accepted.
