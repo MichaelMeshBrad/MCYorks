@@ -23,6 +23,9 @@ These suggested settings have been deployed successfully across Yorkshire. Indiv
 | `set advert.interval 237` | Sets the zero-hop advertisement interval to 237 minutes (approx. 4 hours). |
 | `set dutycycle 10` | Sets the radio duty cycle to 10% (firmware v1.15+). |
 
+Flood.Max - Controls Flood messages which ARE scoped with a region tag
+Flood.Max.UnScoped - Controls Flood messages are NOT scoped with a region tag
+
 !!! warning "Enter commands individually"
     Wait for an `OK` response after each command so you know it has been accepted.
 
@@ -37,9 +40,23 @@ With these settings, the repeater will:
 - Apply minimal loop detection.
 - Reduce unnecessary advertisement traffic.
 
-## Yorkshire region configuration
+## Radio Transmit Delay
 
-The following configuration is actively used on the Yorkshire region and the `#Yorkshire` channel.
+The following commands may help messages get out based on the number of neighbours your repeater has.
+
+## Suggested commands
+
+| Command | Description |
+| --- | --- |
+| `set tx delay 0.5` | Sets a 0.5 second delay, best for 1-10 neighbours |
+| `set tx delay 1.0` | Sets a 1.0 second delay, best for 11-20 neighbours |
+| `set tx delay 1.8` | Sets a 1.8 second delay, best for 20+ neighbours |
+
+If your repeater has 20+ neighbours, the TX Delay COULD be increased up to a max of 2.0
+
+## Yorkshire Region Configuration
+
+The following configuration is actively used on the Yorkshire region and the `#yorkshire` channel.
 
 Enter these commands in order:
 
